@@ -328,12 +328,12 @@ const boards = [
       featureTag: '● FEATURE 01 • VISUAL BUG CREATOR',
       titleMain: 'Capture, Analyze & Report Bugs in',
       titleGradient: 'Seconds',
-      subtitle: 'Eliminate manual QA documentation. Capture full tabs or snips, auto-diagnose UI anomalies with AI, and sync to Jira instantly.',
+      subtitle: 'Eliminate manual QA documentation. Capture full tabs or snips, drag & drop screenshots, auto-diagnose UI anomalies with AI, and sync to Jira instantly.',
       bullets: [
         {
-          icon: '✨',
-          title: 'Dual Vision AI Switcher (OpenAI & Gemini)',
-          desc: 'Toggle between OpenAI (GPT-4o / GPT-4o-mini) and Google Gemini (3.8 Flash) directly in the bug creator.'
+          icon: '🦙',
+          title: 'Triple Vision AI Switcher (Ollama, OpenAI, Gemini)',
+          desc: 'Toggle seamlessly between 100% offline Ollama, OpenAI GPT-4o, and Google Gemini right in the bug creator.'
         },
         {
           icon: '💻',
@@ -341,12 +341,12 @@ const boards = [
           desc: 'Automatic detection of OS, browser version, viewport, and screen resolution formatted into clean Jira tables.'
         },
         {
-          icon: '⌨️',
-          title: 'Global Keyboard Shortcuts',
-          desc: 'Trigger instant capture anywhere in Chrome with ⌘+Shift+S (macOS) or Alt+Shift+S (Win/Linux).'
+          icon: '📁',
+          title: 'Drag & Drop and Global Shortcuts',
+          desc: 'Drop images directly, click to browse, paste from clipboard, or capture instantly with ⌘+Shift+S / Alt+Shift+S.'
         }
       ],
-      topPill: '⚡ Instant AI Switcher',
+      topPill: '⚡ Ollama • OpenAI • Gemini',
       bottomPill: '🎯 Auto-Detected Specs: macOS & Viewport',
       panelTitle: 'BugAgent AI — New Issue Creator',
       imageRelativePath: '../../assets/user_raw/user-1-new-issue.png'
@@ -358,17 +358,17 @@ const boards = [
       featureTag: '● FEATURE 02 • INSTANT ONBOARDING',
       titleMain: 'Zero Friction Setup: Ready in',
       titleGradient: '60 Seconds',
-      subtitle: 'No complex server configuration. Connect your Jira workspace and optional AI engine in two straightforward steps.',
+      subtitle: 'No complex server configuration. Connect your Jira workspace and preferred AI engine in two straightforward steps.',
       bullets: [
         {
           icon: '🔗',
           title: 'Universal Jira Connection',
-          desc: 'Seamlessly works with Jira Cloud and Jira Server / Data Center using Personal Access Tokens (PAT).'
+          desc: 'Seamlessly works with Jira Cloud and Jira Server / Data Center with automatic error sanitization.'
         },
         {
           icon: '🤖',
-          title: 'Choose Your Preferred AI Agent',
-          desc: 'Select Google Gemini or OpenAI right from day one, or start without AI and enable it anytime in Settings.'
+          title: 'Choose Cloud AI or 100% Offline Ollama',
+          desc: 'Select Gemini, OpenAI, or local Ollama right from day one, or start without AI and enable it anytime.'
         },
         {
           icon: '🔒',
@@ -385,28 +385,28 @@ const boards = [
   {
     name: 'screenshot-3-dual-ai-settings-1280x800',
     data: {
-      featureTag: '● FEATURE 03 • MULTI-AI & CONTROL',
+      featureTag: '● FEATURE 03 • MULTI-AI & OLLAMA SETTINGS',
       titleMain: 'Granular Control Over Your',
       titleGradient: 'AI & Jira Stack',
-      subtitle: 'Customize prompt behaviors, default issue types, and theme settings to match your team\'s QA workflow.',
+      subtitle: 'Configure local Ollama models, cloud AI providers, default issue types, and appearance to match your team\'s workflow.',
       bullets: [
+        {
+          icon: '🦙',
+          title: 'Ollama Localhost AI Vision',
+          desc: 'Connect to localhost:11434, auto-fetch vision models (moondream, llama3.2-vision), with smart model validation.'
+        },
         {
           icon: '⚙️',
           title: 'Multi-AI Engine Configuration',
-          desc: 'Configure OpenAI (GPT-4o, GPT-4o-mini) and Google Gemini models with full BYOK key management.'
+          desc: 'Configure OpenAI (GPT-4o / GPT-4o-mini) and Google Gemini with full BYOK key encryption.'
         },
         {
           icon: '🌓',
           title: 'Appearance & Theme Selection',
-          desc: 'Toggle between sleek Light Mode and battery-friendly Dark Mode, or sync automatically with your system.'
-        },
-        {
-          icon: '📊',
-          title: 'Live Usage & Quota Monitoring',
-          desc: 'Track monthly submitted bugs and verify live status indicators for Jira and AI connectivity at a glance.'
+          desc: 'Switch between Light Mode and Dark Mode with instant status pills for Jira, AI, and project defaults.'
         }
       ],
-      topPill: '🧠 GPT-4o & Gemini BYOK',
+      topPill: '🦙 Ollama Local AI & BYOK',
       bottomPill: '📊 Live Bug Quota Tracking',
       panelTitle: 'BugAgent AI — Settings & AI Analyzer',
       imageRelativePath: '../../assets/user_raw/user-3-settings.png'
@@ -428,7 +428,7 @@ const boards = [
         {
           icon: '🔗',
           title: 'Direct Jira Ticket Deep-Links',
-          desc: 'Jump directly to your Jira issues (DEV-101 to DEV-105) in a new tab with a single click.'
+          desc: 'Jump directly to your Jira issues in a new tab with a single click.'
         },
         {
           icon: '📋',
@@ -437,7 +437,7 @@ const boards = [
         }
       ],
       topPill: '⚡ Instant Slack / Teams Share',
-      bottomPill: '🔗 Deep-Links to DEV-101..105',
+      bottomPill: '🔗 Deep-Links to Jira Tickets',
       panelTitle: 'BugAgent AI — Recent Submissions',
       imageRelativePath: '../../assets/user_raw/user-4-recent.png'
     }
@@ -446,10 +446,15 @@ const boards = [
     name: 'screenshot-5-global-shortcuts-1280x800',
     data: {
       featureTag: '● FEATURE 05 • KNOWLEDGE BASE & QA GUIDE',
-      titleMain: 'Built-in Guides, API Setup &',
+      titleMain: 'Built-in Guides, Local AI Setup &',
       titleGradient: 'QA Best Practices',
-      subtitle: 'Everything you need to master visual testing, keyboard shortcuts, and API tokens right inside the extension.',
+      subtitle: 'Everything you need to master visual testing, Ollama configuration, keyboard shortcuts, and API tokens inside the extension.',
       bullets: [
+        {
+          icon: '🦙',
+          title: 'Localhost AI (Ollama) Setup Guide',
+          desc: 'Step-by-step instructions for running vision models locally on macOS, Windows, and Linux with CORS headers.'
+        },
         {
           icon: '🔑',
           title: 'Interactive Token Guides',
@@ -459,14 +464,9 @@ const boards = [
           icon: '⌨️',
           title: 'Keyboard Shortcut Reference',
           desc: 'Complete cheatsheet for active tab capture, quick screenshot paste, and sidebar navigation.'
-        },
-        {
-          icon: '⭐',
-          title: 'Community & Feedback',
-          desc: 'Quick access to welcome wizard re-runs, feature requests, and 5-star Chrome Web Store reviews.'
         }
       ],
-      topPill: '📖 Interactive API Setup Guides',
+      topPill: '📖 Local Ollama & API Guides',
       bottomPill: '⌨️ Keyboard Cheatsheet',
       panelTitle: 'BugAgent AI — Help & QA Best Practices',
       imageRelativePath: '../../assets/user_raw/user-5-help.png'

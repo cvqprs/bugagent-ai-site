@@ -43,7 +43,7 @@ for (const lang of languages) {
     } else {
       targetUrl = l === 'en' ? '../' : `../${l}/`;
     }
-    return `            <a href="${targetUrl}" class="lang-option ${isActive ? 'active' : ''}" data-lang="${l}"><span>${lData.lang_flag}</span> <span>${lData.lang_name}</span></a>`;
+    return `            <a href="${targetUrl}" class="lang-option ${isActive ? 'active' : ''}" data-lang="${l}"><span class="lang-iso-badge">${l.toUpperCase()}</span> <span>${lData.lang_name}</span></a>`;
   }).join('\n');
 
   // Smart Auto-detection redirect for root English page
@@ -79,7 +79,6 @@ for (const lang of languages) {
   compiled = compiled.replace(/\{\{canonical_url\}\}/g, canonicalUrl);
   compiled = compiled.replace(/\{\{assets_path\}\}/g, assetsPath);
   compiled = compiled.replace(/\{\{home_path\}\}/g, homePath);
-  compiled = compiled.replace(/\{\{current_lang_flag\}\}/g, data.lang_flag);
   compiled = compiled.replace(/\{\{current_lang_code_upper\}\}/g, lang.toUpperCase());
   compiled = compiled.replace(/\{\{lang_menu_items\}\}/g, langMenuItems);
   compiled = compiled.replace(/\{\{root_redirect_script\}\}/g, rootRedirectScript);

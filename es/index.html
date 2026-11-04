@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BugAgent AI - Agente Autónomo de QA y Reporte de Errores para Jira</title>
-  <meta name="description" content="Automatiza los reportes de defectos de software. Captura pantallas, analiza fallos con Google Gemini y OpenAI Vision, y crea tickets de Jira en segundos.">
+  <meta name="description" content="Automatiza los reportes de defectos de software. Captura pantallas, analiza fallos con Ollama local, Google Gemini y OpenAI Vision, y crea tickets de Jira en segundos.">
   <link rel="canonical" href="https://bugagentai.com/es/">
   <link rel="alternate" hreflang="x-default" href="https://bugagentai.com/">
   <link rel="alternate" hreflang="en" href="https://bugagentai.com/">
@@ -20,7 +20,7 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://bugagentai.com/es/">
   <meta property="og:title" content="BugAgent AI - Agente Autónomo de QA y Reporte de Errores para Jira">
-  <meta property="og:description" content="Captura pantallas, detecta fallos de red, analiza con Gemini y OpenAI y crea tickets de Jira al instante.">
+  <meta property="og:description" content="Captura pantallas, arrastra archivos, analiza con Ollama local, Gemini y OpenAI y crea tickets de Jira al instante.">
   <meta property="og:image" content="https://bugagentai.com/assets/og-image-1200x630.jpg">
   <meta property="og:image:secure_url" content="https://bugagentai.com/assets/og-image-1200x630.jpg">
   <meta property="og:image:type" content="image/jpeg">
@@ -33,7 +33,7 @@
   <meta name="twitter:domain" content="bugagentai.com">
   <meta name="twitter:url" content="https://bugagentai.com/es/">
   <meta name="twitter:title" content="BugAgent AI - Agente Autónomo de QA y Reporte de Errores para Jira">
-  <meta name="twitter:description" content="Captura pantallas, detecta fallos de red, analiza con Gemini y OpenAI y crea tickets de Jira al instante.">
+  <meta name="twitter:description" content="Captura pantallas, arrastra archivos, analiza con Ollama local, Gemini y OpenAI y crea tickets de Jira al instante.">
   <meta name="twitter:image" content="https://bugagentai.com/assets/og-image-1200x630.jpg">
 
   <!-- Umami Cloud Privacy-Friendly Analytics -->
@@ -50,8 +50,8 @@
     "inLanguage": "es",
     "applicationCategory": "DeveloperApplication",
     "operatingSystem": "Google Chrome, macOS, Windows, Linux, ChromeOS",
-    "softwareVersion": "1.4.0",
-    "description": "Automatiza los reportes de defectos de software. Captura pantallas, analiza fallos con Google Gemini y OpenAI Vision, y crea tickets de Jira en segundos.",
+    "softwareVersion": "1.5.0",
+    "description": "Automatiza los reportes de defectos de software. Captura pantallas, analiza fallos con Ollama local, Google Gemini y OpenAI Vision, y crea tickets de Jira en segundos.",
     "image": "https://bugagentai.com/assets/promo-marquee-1400x560.jpg",
     "downloadUrl": "https://chromewebstore.google.com/detail/ifligmhoakpphcdinajnmefdopaallbl",
     "screenshot": [
@@ -62,13 +62,13 @@
       "https://bugagentai.com/assets/screenshot-5-global-shortcuts-1280x800.jpg"
     ],
     "featureList": [
-      "One-Click Visual Bug Capture",
+      "One-Click Visual Bug Capture & Drag-and-Drop Screenshots",
       "Automated Environment Specs Detection (OS, Browser, Viewport, Screen Resolution)",
-      "Dual AI Vision Engine (OpenAI GPT-4o & Google Gemini 3.8 Flash)",
-      "100% Client-Side BYOK Encryption and Zero Telemetry",
+      "Triple AI Vision Engine (Ollama Localhost AI, OpenAI GPT-4o & Google Gemini 3.8 Flash)",
+      "100% Client-Side BYOK Encryption and Zero Telemetry (100% Offline Ollama Option)",
       "Global Keyboard Shortcuts (Cmd+Shift+S / Alt+Shift+S)",
       "GDPR Blur Redaction & Built-in Screenshot Annotation",
-      "Atlassian Jira Cloud & Server/Data Center Integration"
+      "Atlassian Jira Cloud & Server/Data Center Integration with Error Sanitization"
     ],
     "offers": [
       {
@@ -249,13 +249,13 @@
     .lang-btn {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
+      gap: 7px;
       background: var(--surface-card);
       border: 1px solid var(--border-medium);
       border-radius: var(--radius-sm);
       padding: 7px 11px;
       font-size: 13px;
-      font-weight: 600;
+      font-weight: 700;
       color: var(--text-main);
       cursor: pointer;
       transition: all 0.15s ease;
@@ -265,6 +265,21 @@
     .lang-btn:hover {
       background: var(--surface-subtle);
       border-color: var(--border-focus);
+      color: var(--jira-blue);
+    }
+
+    .lang-globe-icon {
+      color: var(--text-muted);
+      flex-shrink: 0;
+      transition: color 0.15s ease;
+    }
+
+    .lang-btn:hover .lang-globe-icon {
+      color: var(--jira-blue);
+    }
+
+    .lang-code-text {
+      letter-spacing: 0.04em;
     }
 
     .lang-menu {
@@ -275,7 +290,7 @@
       border: 1px solid var(--border-light);
       border-radius: var(--radius-md);
       box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
-      min-width: 145px;
+      min-width: 155px;
       padding: 6px;
       display: none;
       z-index: 1000;
@@ -288,7 +303,7 @@
     .lang-option {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
       padding: 8px 12px;
       font-size: 13.5px;
       font-weight: 500;
@@ -307,6 +322,28 @@
       background: var(--jira-blue-subtle);
       color: var(--jira-blue);
       font-weight: 700;
+    }
+
+    .lang-iso-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      padding: 2px 5px;
+      border-radius: 4px;
+      background: var(--surface-subtle);
+      border: 1px solid var(--border-medium);
+      color: var(--text-secondary);
+      min-width: 26px;
+      line-height: 1.2;
+    }
+
+    .lang-option.active .lang-iso-badge {
+      background: var(--jira-blue);
+      border-color: var(--jira-blue);
+      color: #ffffff;
     }
 
     .btn {
@@ -820,17 +857,17 @@
         <!-- Language Selector -->
         <div class="lang-selector">
           <button class="lang-btn" id="langBtn" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Select Language">
-            <span>🇪🇸</span>
-            <span>ES</span>
+            <svg class="lang-globe-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            <span class="lang-code-text">ES</span>
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg>
           </button>
           <div class="lang-menu" id="langMenu">
-                        <a href="../" class="lang-option " data-lang="en"><span>🇬🇧</span> <span>English</span></a>
-            <a href="../de/" class="lang-option " data-lang="de"><span>🇩🇪</span> <span>Deutsch</span></a>
-            <a href="../pl/" class="lang-option " data-lang="pl"><span>🇵🇱</span> <span>Polski</span></a>
-            <a href="../es/" class="lang-option active" data-lang="es"><span>🇪🇸</span> <span>Español</span></a>
-            <a href="../fr/" class="lang-option " data-lang="fr"><span>🇫🇷</span> <span>Français</span></a>
-            <a href="../ja/" class="lang-option " data-lang="ja"><span>🇯🇵</span> <span>日本語</span></a>
+                        <a href="../" class="lang-option " data-lang="en"><span class="lang-iso-badge">EN</span> <span>English</span></a>
+            <a href="../de/" class="lang-option " data-lang="de"><span class="lang-iso-badge">DE</span> <span>Deutsch</span></a>
+            <a href="../pl/" class="lang-option " data-lang="pl"><span class="lang-iso-badge">PL</span> <span>Polski</span></a>
+            <a href="../es/" class="lang-option active" data-lang="es"><span class="lang-iso-badge">ES</span> <span>Español</span></a>
+            <a href="../fr/" class="lang-option " data-lang="fr"><span class="lang-iso-badge">FR</span> <span>Français</span></a>
+            <a href="../ja/" class="lang-option " data-lang="ja"><span class="lang-iso-badge">JA</span> <span>日本語</span></a>
           </div>
         </div>
 
@@ -849,13 +886,13 @@
   <section class="hero">
     <div class="container">
       <div class="badge-pill">
-        <span>🟢 NOVEDAD EN v1.4.0: OPENAI GPT-4o, MODO OSCURO Y AUTO-SPECS</span>
+        <span>🟢 NOVEDADES EN v1.5.0: IA LOCAL OLLAMA, ARRASTRAR Y SOLTAR Y SANITIZACIÓN JIRA</span>
         <span>•</span>
-        <span>ESTRICTA PRIVACIDAD (BYOK)</span>
+        <span>ESTRICTA PRIVACIDAD (BYOK E IA LOCAL)</span>
       </div>
       <h1 class="hero-title">Automatiza tus reportes de errores en Jira en segundos con <span>BugAgent AI</span></h1>
       <p class="hero-subtitle">
-        El agente autónomo de QA con IA para ingenieros de QA, testers y product managers. Captura bugs visuales, destaca defectos, analiza con Google Gemini o OpenAI Vision y crea tickets completos en Jira sin salir de tu pestaña activa.
+        El agente autónomo de QA con IA para ingenieros de QA, testers y product managers. Captura bugs visuales, analiza defectos 100% offline con Ollama o en la nube con Google Gemini / OpenAI Vision y crea tickets completos en Jira sin salir de tu pestaña activa.
       </p>
       <div class="hero-actions">
         <a id="install" href="https://chromewebstore.google.com/detail/ifligmhoakpphcdinajnmefdopaallbl" class="btn btn-primary btn-lg" target="_blank" rel="noopener" data-umami-event="Add to Chrome (Hero)">
@@ -873,7 +910,7 @@
             <div class="browser-dot dot-yellow"></div>
             <div class="browser-dot dot-green"></div>
           </div>
-          <div class="browser-url-bar">https://acme-store.com/checkout • Probando con BugAgent AI (OpenAI y Gemini)</div>
+          <div class="browser-url-bar">https://acme-store.com/checkout • Probando con BugAgent AI (Ollama, OpenAI y Gemini)</div>
         </div>
         <img src="../assets/screenshot-1-visual-bug-capture-1280x800.jpg" alt="BugAgent AI Visual Bug Capture with OpenAI and Gemini in Chrome">
       </div>
@@ -895,8 +932,8 @@
           <div class="feature-icon-badge">
             <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
           </div>
-          <h3>Captura en 1 clic y atajos globales</h3>
-          <p>Captura la pestaña visible al instante con un solo botón o utiliza los atajos de teclado globales: <strong>⌘+Shift+S</strong> (macOS) y <strong>Alt+Shift+S</strong> (Windows y Linux). Permite pegar desde el portapapeles (Ctrl+V / Cmd+V).</p>
+          <h3>Captura en 1 clic, Arrastrar y Soltar y atajos</h3>
+          <p>Captura la pestaña visible al instante, arrastra capturas directamente a la ventana, selecciona archivos del disco o utiliza atajos globales: <strong>⌘+Shift+S</strong> (macOS) y <strong>Alt+Shift+S</strong> (Windows y Linux).</p>
         </div>
 
         <!-- Feature 2 -->
@@ -904,8 +941,8 @@
           <div class="feature-icon-badge">
             <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
           </div>
-          <h3>Motor dual de Vision AI (Gemini y OpenAI)</h3>
-          <p>Elige entre Google Gemini (3.8 Flash) para una velocidad instantánea u OpenAI (GPT-4o y GPT-4o-mini) para análisis visuales avanzados. Genera hipótesis de causa raíz, pasos para reproducir y resultados esperados en 6 idiomas.</p>
+          <h3>Triple motor de Vision AI (Ollama, Gemini y OpenAI)</h3>
+          <p>Elige entre <strong>Ollama Local AI</strong> (100% offline y sin exposición de datos a la nube), Google Gemini (3.8 Flash) para velocidad máxima u OpenAI (GPT-4o) para análisis avanzados. Genera hipótesis de causa raíz, pasos para reproducir y resultados esperados en 6 idiomas.</p>
         </div>
 
         <!-- Feature 3 -->
@@ -940,8 +977,8 @@
           <div class="feature-icon-badge">
             <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
           </div>
-          <h3>100% BYOK y privacidad sin telemetría</h3>
-          <p>Trae tus propias claves (BYOK). Todas las credenciales de Jira, claves de OpenAI y tokens de Gemini se almacenan cifrados en tu navegador en chrome.storage.local. Cero rastreo.</p>
+          <h3>100% Privacidad (Ollama Local y BYOK)</h3>
+          <p>Control absoluto de tus datos. Ejecuta análisis de visión 100% en tu máquina con Ollama o usa tus propias claves (BYOK) para Gemini y OpenAI. Todas las credenciales permanecen cifradas en tu navegador. Cero rastreo.</p>
         </div>
       </div>
     </div>
@@ -953,15 +990,15 @@
       <div class="section-header">
         <div class="section-tag">Vista Previa Interactiva</div>
         <h2 class="section-title">Descubre BugAgent AI en acción</h2>
-        <p class="section-desc">Diseñado para integrarse nativamente en el panel lateral de Google Chrome sin tapar la pantalla de pruebas.</p>
+        <p class="section-desc">Diseñado para encajar de forma nativa en el panel lateral de Google Chrome sin tapar tu pantalla de pruebas.</p>
       </div>
 
       <div class="showcase-tabs">
-        <button class="tab-btn active" onclick="switchTab(0)">1. Captura de Bugs (Selector AI)</button>
-        <button class="tab-btn" onclick="switchTab(1)">2. Configuración en 1 minuto</button>
-        <button class="tab-btn" onclick="switchTab(2)">3. Ajustes Multi-AI y Jira</button>
-        <button class="tab-btn" onclick="switchTab(3)">4. Incidencias Recientes de Jira</button>
-        <button class="tab-btn" onclick="switchTab(4)">5. Base de Conocimiento y Atajos</button>
+        <button class="tab-btn active" onclick="switchTab(0)">1. Creación de Bugs (Ollama e IA)</button>
+        <button class="tab-btn" onclick="switchTab(1)">2. Configuración en 1 Minuto</button>
+        <button class="tab-btn" onclick="switchTab(2)">3. Ajustes Ollama y Multi-IA</button>
+        <button class="tab-btn" onclick="switchTab(3)">4. Historial Jira y Compartir</button>
+        <button class="tab-btn" onclick="switchTab(4)">5. IA Local y Base de Ayuda</button>
       </div>
 
       <div class="showcase-display">
@@ -979,8 +1016,8 @@
     <div class="container">
       <div class="section-header">
         <div class="section-tag">Precios simples y transparentes</div>
-        <h2 class="section-title">Empieza gratis, desbloquea potencia ilimitada</h2>
-        <p class="section-desc">Prueba y reporta defectos con toda la potencia de la IA en el plan gratuito o desbloquea envíos ilimitados para flujos de trabajo de QA de alta intensidad.</p>
+        <h2 class="section-title">Comienza gratis, mejora para potencia ilimitada</h2>
+        <p class="section-desc">Prueba y reporta bugs con análisis completo de IA en el plan gratuito o desbloquea envíos ilimitados para flujos de QA exigentes.</p>
       </div>
 
       <div class="pricing-grid">
@@ -994,10 +1031,10 @@
           </div>
           <ul class="pricing-features">
             <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <strong>15 reportes de errores</strong> al mes</li>
-            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Análisis completo con Gemini y OpenAI Vision</li>
-            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Especificaciones automáticas y atajos</li>
-            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Modo oscuro completo y difuminado RGPD</li>
-            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Soporte para Jira Cloud y Server/DC</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Análisis completo de Vision AI (Ollama, Gemini y OpenAI)</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Especificaciones automáticas de entorno y atajos</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Modo oscuro completo y desenfoque RGPD</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Soporte para Jira Cloud y Server/Data Center</li>
           </ul>
           <a href="https://chromewebstore.google.com/detail/ifligmhoakpphcdinajnmefdopaallbl" class="btn btn-outline" style="width: 100%;" target="_blank" rel="noopener" data-umami-event="Add to Chrome (Free Plan)">Comenzar Gratis</a>
         </div>
@@ -1012,8 +1049,8 @@
             <span class="period">/ mes</span>
           </div>
           <ul class="pricing-features">
-            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <strong>Reportes de errores ilimitados</strong> (sin límite)</li>
-            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Análisis ilimitados con Gemini y OpenAI</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <strong>Reportes ilimitados</strong> (sin límite mensual)</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Análisis ilimitados con Ollama, Gemini y OpenAI Vision</li>
             <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Insignia dorada ★ PRO en el encabezado</li>
             <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Prioridad en nuevas funciones y actualizaciones</li>
             <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Pagos seguros procesados por Stripe y ExtensionPay</li>
@@ -1074,6 +1111,19 @@
           </ol>
         </div>
 
+        <!-- Setup Guide: Ollama Local AI -->
+        <div class="support-card">
+          <h3>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--jira-blue)" stroke-width="2"><path d="M12 2a10 10 0 0 0-10 10c0 5.52 4.48 10 10 10s10-4.48 10-10A10 10 0 0 0 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+            Cómo usar IA Localhost (Ollama - 100% Offline y Gratis)
+          </h3>
+          <ol>
+            <li>Instala Ollama desde <strong><a href="https://ollama.com" target="_blank" rel="noopener">ollama.com</a></strong> y descarga un modelo de visión (p. ej. <span class="code-badge">ollama run moondream</span> o <span class="code-badge">ollama run llama3.2-vision</span>).</li>
+            <li>Inicia el servidor Ollama permitiendo CORS: en macOS/Linux con <span class="code-badge">OLLAMA_ORIGINS="*" ollama serve</span> (o configura la variable de entorno en Windows).</li>
+            <li>En Configuración de BugAgent AI, selecciona <strong>Localhost AI (Ollama)</strong>, haz clic en <strong>Fetch Models</strong>, selecciona tu modelo de visión y guarda.</li>
+          </ol>
+        </div>
+
         <!-- Support Contact Box -->
         <div class="support-card" style="border: 1px dashed var(--jira-blue); background-color: var(--jira-blue-subtle);">
           <h3 style="color: var(--jira-blue);">
@@ -1106,7 +1156,7 @@
             </div>
           </a>
           <p style="color: var(--text-muted); font-size: 14px;">
-            El agente autónomo de QA que automatiza los informes de errores con Google Gemini y OpenAI Vision directamente en Atlassian Jira.
+            El agente autónomo de QA que automatiza los informes de errores con Ollama local, Google Gemini y OpenAI Vision directamente en Atlassian Jira.
           </p>
         </div>
 

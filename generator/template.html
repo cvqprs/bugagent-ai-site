@@ -50,7 +50,7 @@
     "inLanguage": "{{lang_code}}",
     "applicationCategory": "DeveloperApplication",
     "operatingSystem": "Google Chrome, macOS, Windows, Linux, ChromeOS",
-    "softwareVersion": "1.4.0",
+    "softwareVersion": "1.5.0",
     "description": "{{meta_desc}}",
     "image": "https://bugagentai.com/assets/promo-marquee-1400x560.jpg",
     "downloadUrl": "https://chromewebstore.google.com/detail/ifligmhoakpphcdinajnmefdopaallbl",
@@ -62,13 +62,13 @@
       "https://bugagentai.com/assets/screenshot-5-global-shortcuts-1280x800.jpg"
     ],
     "featureList": [
-      "One-Click Visual Bug Capture",
+      "One-Click Visual Bug Capture & Drag-and-Drop Screenshots",
       "Automated Environment Specs Detection (OS, Browser, Viewport, Screen Resolution)",
-      "Dual AI Vision Engine (OpenAI GPT-4o & Google Gemini 3.8 Flash)",
-      "100% Client-Side BYOK Encryption and Zero Telemetry",
+      "Triple AI Vision Engine (Ollama Localhost AI, OpenAI GPT-4o & Google Gemini 3.8 Flash)",
+      "100% Client-Side BYOK Encryption and Zero Telemetry (100% Offline Ollama Option)",
       "Global Keyboard Shortcuts (Cmd+Shift+S / Alt+Shift+S)",
       "GDPR Blur Redaction & Built-in Screenshot Annotation",
-      "Atlassian Jira Cloud & Server/Data Center Integration"
+      "Atlassian Jira Cloud & Server/Data Center Integration with Error Sanitization"
     ],
     "offers": [
       {
@@ -249,13 +249,13 @@
     .lang-btn {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
+      gap: 7px;
       background: var(--surface-card);
       border: 1px solid var(--border-medium);
       border-radius: var(--radius-sm);
       padding: 7px 11px;
       font-size: 13px;
-      font-weight: 600;
+      font-weight: 700;
       color: var(--text-main);
       cursor: pointer;
       transition: all 0.15s ease;
@@ -265,6 +265,21 @@
     .lang-btn:hover {
       background: var(--surface-subtle);
       border-color: var(--border-focus);
+      color: var(--jira-blue);
+    }
+
+    .lang-globe-icon {
+      color: var(--text-muted);
+      flex-shrink: 0;
+      transition: color 0.15s ease;
+    }
+
+    .lang-btn:hover .lang-globe-icon {
+      color: var(--jira-blue);
+    }
+
+    .lang-code-text {
+      letter-spacing: 0.04em;
     }
 
     .lang-menu {
@@ -275,7 +290,7 @@
       border: 1px solid var(--border-light);
       border-radius: var(--radius-md);
       box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
-      min-width: 145px;
+      min-width: 155px;
       padding: 6px;
       display: none;
       z-index: 1000;
@@ -288,7 +303,7 @@
     .lang-option {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
       padding: 8px 12px;
       font-size: 13.5px;
       font-weight: 500;
@@ -307,6 +322,28 @@
       background: var(--jira-blue-subtle);
       color: var(--jira-blue);
       font-weight: 700;
+    }
+
+    .lang-iso-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      padding: 2px 5px;
+      border-radius: 4px;
+      background: var(--surface-subtle);
+      border: 1px solid var(--border-medium);
+      color: var(--text-secondary);
+      min-width: 26px;
+      line-height: 1.2;
+    }
+
+    .lang-option.active .lang-iso-badge {
+      background: var(--jira-blue);
+      border-color: var(--jira-blue);
+      color: #ffffff;
     }
 
     .btn {
@@ -820,8 +857,8 @@
         <!-- Language Selector -->
         <div class="lang-selector">
           <button class="lang-btn" id="langBtn" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Select Language">
-            <span>{{current_lang_flag}}</span>
-            <span>{{current_lang_code_upper}}</span>
+            <svg class="lang-globe-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            <span class="lang-code-text">{{current_lang_code_upper}}</span>
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg>
           </button>
           <div class="lang-menu" id="langMenu">
@@ -1066,6 +1103,19 @@
             <li>{{support_openai_step1}}</li>
             <li>{{support_openai_step2}}</li>
             <li>{{support_openai_step3}}</li>
+          </ol>
+        </div>
+
+        <!-- Setup Guide: Ollama Local AI -->
+        <div class="support-card">
+          <h3>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--jira-blue)" stroke-width="2"><path d="M12 2a10 10 0 0 0-10 10c0 5.52 4.48 10 10 10s10-4.48 10-10A10 10 0 0 0 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+            {{support_ollama_title}}
+          </h3>
+          <ol>
+            <li>{{support_ollama_step1}}</li>
+            <li>{{support_ollama_step2}}</li>
+            <li>{{support_ollama_step3}}</li>
           </ol>
         </div>
 
