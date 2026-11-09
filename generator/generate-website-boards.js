@@ -331,9 +331,9 @@ const boards = [
       subtitle: 'Eliminate manual QA documentation. Capture full tabs or snips, drag & drop screenshots, auto-diagnose UI anomalies with AI, and sync to Jira instantly.',
       bullets: [
         {
-          icon: '🦙',
-          title: 'Triple Vision AI Switcher (Ollama, OpenAI, Gemini)',
-          desc: 'Toggle seamlessly between 100% offline Ollama, OpenAI GPT-4o, and Google Gemini right in the bug creator.'
+          icon: '🎛️',
+          title: '4-Engine Vision AI Hub (Claude, Gemini, OpenAI, Ollama)',
+          desc: 'Toggle seamlessly between Anthropic Claude, Google Gemini, OpenAI GPT-4o, and 100% offline Ollama right in the bug creator.'
         },
         {
           icon: '💻',
@@ -346,7 +346,7 @@ const boards = [
           desc: 'Drop images directly, click to browse, paste from clipboard, or capture instantly with ⌘+Shift+S / Alt+Shift+S.'
         }
       ],
-      topPill: '⚡ Ollama • OpenAI • Gemini',
+      topPill: '⚡ Claude • Gemini • OpenAI • Ollama',
       bottomPill: '🎯 Auto-Detected Specs: macOS & Viewport',
       panelTitle: 'BugAgent AI — New Issue Creator',
       imageRelativePath: '../../assets/user_raw/user-1-new-issue.png'
@@ -368,7 +368,7 @@ const boards = [
         {
           icon: '🤖',
           title: 'Choose Cloud AI or 100% Offline Ollama',
-          desc: 'Select Gemini, OpenAI, or local Ollama right from day one, or start without AI and enable it anytime.'
+          desc: 'Select Claude, Gemini, OpenAI, or local Ollama right from day one, or start without AI and enable it anytime.'
         },
         {
           icon: '🔒',
@@ -385,10 +385,10 @@ const boards = [
   {
     name: 'screenshot-3-dual-ai-settings-1280x800',
     data: {
-      featureTag: '● FEATURE 03 • MULTI-AI & OLLAMA SETTINGS',
+      featureTag: '● FEATURE 03 • 4-ENGINE AI & OLLAMA SETTINGS',
       titleMain: 'Granular Control Over Your',
       titleGradient: 'AI & Jira Stack',
-      subtitle: 'Configure local Ollama models, cloud AI providers, default issue types, and appearance to match your team\'s workflow.',
+      subtitle: 'Configure Anthropic Claude, Google Gemini, OpenAI, local Ollama models, default issue types, and appearance.',
       bullets: [
         {
           icon: '🦙',
@@ -397,8 +397,8 @@ const boards = [
         },
         {
           icon: '⚙️',
-          title: 'Multi-AI Engine Configuration',
-          desc: 'Configure OpenAI (GPT-4o / GPT-4o-mini) and Google Gemini with full BYOK key encryption.'
+          title: 'Multi-AI Engine Configuration (BYOK)',
+          desc: 'Configure Anthropic Claude (Sonnet & Haiku), OpenAI (GPT-4o), and Google Gemini with strict local key storage.'
         },
         {
           icon: '🌓',
@@ -406,7 +406,7 @@ const boards = [
           desc: 'Switch between Light Mode and Dark Mode with instant status pills for Jira, AI, and project defaults.'
         }
       ],
-      topPill: '🦙 Ollama Local AI & BYOK',
+      topPill: '🎛️ 4-Engine AI & Local Ollama',
       bottomPill: '📊 Live Bug Quota Tracking',
       panelTitle: 'BugAgent AI — Settings & AI Analyzer',
       imageRelativePath: '../../assets/user_raw/user-3-settings.png'
@@ -457,16 +457,16 @@ const boards = [
         },
         {
           icon: '🔑',
-          title: 'Interactive Token Guides',
-          desc: 'Collapsible setup instructions for Jira PAT / Cloud tokens, Google Gemini keys, and OpenAI keys.'
+          title: 'Interactive Token & API Key Guides',
+          desc: 'Collapsible setup instructions for Jira PAT / Cloud tokens, Anthropic Claude, Google Gemini, and OpenAI keys.'
         },
         {
           icon: '⌨️',
-          title: 'Keyboard Shortcut Reference',
-          desc: 'Complete cheatsheet for active tab capture, quick screenshot paste, and sidebar navigation.'
+          title: 'Shortcuts & Smart Capture UX',
+          desc: 'Complete cheatsheet for active tab capture, quick screenshot paste, and friendly Chrome tab guidance.'
         }
       ],
-      topPill: '📖 Local Ollama & API Guides',
+      topPill: '📖 4-Engine AI & API Guides',
       bottomPill: '⌨️ Keyboard Cheatsheet',
       panelTitle: 'BugAgent AI — Help & QA Best Practices',
       imageRelativePath: '../../assets/user_raw/user-5-help.png'
@@ -501,4 +501,5 @@ for (const b of boards) {
   console.log(`   ✔ Success: ${b.name}.jpg (${(size / 1024).toFixed(1)} KB)`);
 }
 
+fs.rmSync(tempHtmlDir, { recursive: true, force: true });
 console.log('\n🎉 All 5 boards successfully created in assets/ directory!');

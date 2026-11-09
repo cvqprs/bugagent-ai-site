@@ -4,9 +4,14 @@
 ObjC.import('AppKit');
 ObjC.import('Foundation');
 
-var iconPath = '/Users/piotrszymanski/.gemini/antigravity/scratch/jira-bug-snapper/icons/icon-128.png';
-var mockupPath = '/Users/piotrszymanski/.gemini/antigravity/scratch/jira-bug-snapper-site/assets/user_raw/user-1-new-issue.png';
-var outPath = '/Users/piotrszymanski/.gemini/antigravity/scratch/jira-bug-snapper-site/assets/og-image-1200x630.jpg';
+var fm = $.NSFileManager.defaultManager;
+var cwdStr = fm.currentDirectoryPath;
+var siteDir = fm.fileExistsAtPath(cwdStr.stringByAppendingPathComponent('assets/icon-128.png').js)
+  ? cwdStr.js
+  : cwdStr.stringByDeletingLastPathComponent.js;
+var iconPath = siteDir + '/assets/icon-128.png';
+var mockupPath = siteDir + '/assets/user_raw/user-1-new-issue.png';
+var outPath = siteDir + '/assets/og-image-1200x630.jpg';
 
 function rgb(r, g, b, a) {
   return $.NSColor.colorWithRedGreenBlueAlpha(r / 255.0, g / 255.0, b / 255.0, (a !== undefined ? a : 1.0));
@@ -103,7 +108,7 @@ function renderSocialOgImage() {
   // 7. Feature Badges (2x2 Grid)
   var badges = [
     "⚡ 1-Click Bug Capture",
-    "🤖 Dual Vision AI (GPT + Gemini)",
+    "🤖 Gemini, GPT, Claude & Ollama",
     "🛡️ 100% BYOK & Zero Telemetry",
     "🐞 Direct Jira Ticket Sync"
   ];

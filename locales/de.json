@@ -3,9 +3,9 @@
   "lang_name": "Deutsch",
   "lang_flag": "🇩🇪",
   "meta_title": "BugAgent AI - Autonomer KI-QA-Agent & Fehlerberichte für Jira",
-  "meta_desc": "Automatisiere Software-Fehlerberichte. Screenshots erfassen, Netzwerkfehler analysieren mit lokaler Ollama, Google Gemini & OpenAI Vision und Jira-Tickets in Sekunden erstellen.",
+  "meta_desc": "Automatisiere Software-Fehlerberichte. Screenshots erfassen, Netzwerkfehler erkennen, mit Anthropic Claude, Google Gemini, OpenAI & lokaler Ollama-KI analysieren und Jira-Tickets in Sekunden erstellen.",
   "og_title": "BugAgent AI - Autonomer KI-QA-Agent & Fehlerberichte für Jira",
-  "og_desc": "Screenshots erfassen, Drag & Drop nutzen, mit lokaler Ollama, Gemini & OpenAI analysieren und Jira-Tickets sofort erstellen.",
+  "og_desc": "Screenshots erfassen, Drag & Drop nutzen, mit Anthropic Claude, Gemini, OpenAI & lokaler Ollama analysieren und Jira-Tickets sofort erstellen.",
   
   "brand_badge": "Smarter QA-Assistent",
   "nav_features": "Funktionen",
@@ -15,14 +15,14 @@
   "nav_privacy": "Datenschutz",
   "btn_add_to_chrome": "Zu Chrome hinzufügen",
 
-  "hero_badge": "🟢 NEU IN v1.5.0: OLLAMA LOKALE VISION-KI, DRAG & DROP & JIRA-BEREINIGUNG",
+  "hero_badge": "🟠 NEU IN v1.6.0: ANTHROPIC CLAUDE VISION-KI, 4-ENGINE KI-HUB & SMARTER CAPTURE UX",
   "hero_badge_privacy": "STRIKTER DATENSCHUTZ (BYOK & LOKALE KI)",
   "hero_title_prefix": "Automatisiere deine Jira-Fehlerberichte in Sekunden mit",
   "hero_title_highlight": "BugAgent AI",
-  "hero_subtitle": "Der autonome KI-QA-Agent für QA-Ingenieure, Softwaretester und Produktmanager. Visuelle Bugs erfassen, Defekte markieren, 100% offline mit Ollama oder in der Cloud mit Google Gemini / OpenAI Vision analysieren und vollständige Jira-Tickets erstellen, ohne den Tab zu verlassen.",
+  "hero_subtitle": "Der autonome KI-QA-Agent für QA-Ingenieure, Softwaretester und Produktmanager. Visuelle Bugs erfassen, Defekte markieren, mit Anthropic Claude, Google Gemini, OpenAI oder 100% offline mit Ollama analysieren und detaillierte Jira-Tickets erstellen, ohne den Tab zu verlassen.",
   "hero_cta_free": "Kostenlos zu Chrome hinzufügen",
   "hero_cta_demo": "Interaktive Demo ansehen",
-  "hero_url_bar": "https://acme-store.com/checkout • Testen mit BugAgent AI (Ollama, OpenAI & Gemini)",
+  "hero_url_bar": "https://acme-store.com/checkout • Testen mit BugAgent AI (Claude, Gemini, OpenAI & Ollama)",
 
   "features_tag": "Produktfunktionen",
   "features_title": "Entwickelt für moderne QA-Teams & Softwaretester",
@@ -31,8 +31,8 @@
   "feat1_title": "1-Klick-Erfassung, Drag & Drop und Shortcuts",
   "feat1_desc": "Erfasse den sichtbaren Tab sofort per Mausklick, ziehe Screenshots direkt hinein, wähle Dateien vom Datenträger oder nutze globale Tastatur-Shortcuts: <strong>⌘+Shift+S</strong> (macOS) und <strong>Alt+Shift+S</strong> (Windows & Linux).",
 
-  "feat2_title": "Dreifache Vision-KI-Engine (Ollama, Gemini & OpenAI)",
-  "feat2_desc": "Wähle zwischen <strong>Ollama Local AI</strong> (100% offline & null Datenübertragung in die Cloud), Google Gemini (3.8 Flash) für blitzschnelle Reaktionszeit oder OpenAI (GPT-4o) für anspruchsvolle UI-Analysen. Generiert Fehlerursachen-Hypothesen, Reproduktionsschritte und Soll-Ist-Vergleiche in 6 Sprachen.",
+  "feat2_title": "4-Engine Vision-KI-Hub (Claude, Gemini, OpenAI & Ollama)",
+  "feat2_desc": "Wechsle nahtlos zwischen <strong>Anthropic Claude</strong> (Sonnet &amp; Haiku), Google Gemini (3.8 Flash), OpenAI (GPT-4o) und <strong>Ollama Local AI</strong> (100% offline). Generiert präzise Fehlerbeschreibungen, Reproduktionsschritte und Soll-Ist-Vergleiche in 6 Sprachen.",
 
   "feat3_title": "Automatische Umgebungsspezifikationen für Jira",
   "feat3_desc": "Erkennt Betriebssystem, Browserversion, Viewport-Größe und Retina-Skalierung automatisch und formatiert sie ohne manuellen Aufwand in eine saubere Jira-Wiki-Tabelle.",
@@ -44,14 +44,14 @@
   "feat5_desc": "Zeichne Rechtecke, Pfeile, Texthinweise oder verpixle sensible Kundendaten (DSGVO/PII, Tokens, E-Mails) direkt auf dem Screenshot, bevor Daten an Jira übermittelt werden.",
 
   "feat6_title": "100% Datenschutz (Lokale Ollama & BYOK)",
-  "feat6_desc": "Volle Datenhoheit. Führe Bildanalysen zu 100% lokal auf deinem Computer mit Ollama aus oder nutze eigene API-Schlüssel (BYOK) für Gemini und OpenAI. Alle Zugangsdaten bleiben verschlüsselt in deinem Browser. Kein Tracking.",
+  "feat6_desc": "Volle Datenhoheit. Führe Bildanalysen zu 100% lokal auf deinem Computer mit Ollama aus oder nutze eigene API-Schlüssel (BYOK) für Gemini, OpenAI und Anthropic Claude. Alle Zugangsdaten bleiben strikt lokal in deinem Browser. Kein Tracking.",
 
   "showcase_tag": "Interaktive Vorschau",
   "showcase_title": "Erlebe BugAgent AI in Aktion",
   "showcase_desc": "Perfekt integriert in das native Seitenpanel von Google Chrome, ohne deinen Testbildschirm zu verdecken.",
-  "tab0_title": "1. Bug-Erfassung (Ollama & KI)",
+  "tab0_title": "1. Fehlererfassung (4-Engine KI)",
   "tab1_title": "2. 1-Minuten Onboarding",
-  "tab2_title": "3. Ollama & Multi-KI Einstellungen",
+  "tab2_title": "3. 4-Engine KI- & Ollama-Einstellungen",
   "tab3_title": "4. Jira-Verlauf & Teilen",
   "tab4_title": "5. Lokale KI & Wissensdatenbank",
 
@@ -64,7 +64,7 @@
   "free_tier_period": "/ Monat",
   "free_tier_note": "Dauerhaft kostenlos • Keine Kreditkarte erforderlich",
   "free_feat_1": "<strong>15 Fehlerberichte</strong> pro Monat",
-  "free_feat_2": "Vollständige Vision-KI-Analyse (Ollama, Gemini & OpenAI)",
+  "free_feat_2": "Vollständige Vision-KI-Analyse (Claude, Gemini, OpenAI & Ollama)",
   "free_feat_3": "Automatische Umgebungsspezifikationen & Shortcuts",
   "free_feat_4": "Voller Dark Mode & DSGVO-Weichzeichner",
   "free_feat_5": "Jira Cloud & Server/DC Unterstützung",
@@ -76,7 +76,7 @@
   "pro_tier_period": "/ Monat",
   "pro_tier_note": "Monatlich kündbar • Jederzeit beendbar",
   "pro_feat_1": "<strong>Unbegrenzte Fehlereinreichungen</strong> (kein Limit)",
-  "pro_feat_2": "Unbegrenzte Ollama, Gemini & OpenAI Vision-Analysen",
+  "pro_feat_2": "Unbegrenzte Claude-, Gemini-, OpenAI- & Ollama-Vision-Analysen",
   "pro_feat_3": "Goldenes ★ PRO-Badge im Erweiterungs-Header",
   "pro_feat_4": "Priorisierter Zugang zu neuen Updates & Releases",
   "pro_feat_5": "Sichere Zahlungsabwicklung über Stripe & ExtensionPay",
@@ -102,6 +102,11 @@
   "support_openai_step2": "Klicke auf <strong>Create new secret key</strong>, vergib einen Namen (z. B. <em>BugAgent AI</em>) und klicke auf <strong>Create secret key</strong>.",
   "support_openai_step3": "Kopiere deinen Schlüssel (beginnt mit <span class=\"code-badge\">sk-...</span>), füge ihn unter <strong>OpenAI Vision Key</strong> ein und klicke auf <strong>Save Settings</strong>.",
 
+  "support_claude_title": "So erhältst du deinen Anthropic Claude API-Schlüssel (Sonnet & Haiku)",
+  "support_claude_step1": "Öffne die <strong><a href=\"https://console.anthropic.com/settings/keys\" target=\"_blank\" rel=\"noopener noreferrer\">Anthropic Console (console.anthropic.com)</a></strong> und melde dich an.",
+  "support_claude_step2": "Klicke auf <strong>Create Key</strong>, vergib einen Namen (z. B. <em>BugAgent AI</em>) und klicke auf <strong>Add</strong>.",
+  "support_claude_step3": "Kopiere deinen Schlüssel (beginnt mit <span class=\"code-badge\">sk-ant-...</span>), füge ihn in den Einstellungen unter <strong>Claude API-Schlüssel</strong> ein, wähle Sonnet oder Haiku und klicke auf <strong>Save Settings</strong>.",
+
   "support_ollama_title": "Verwendung von Localhost-KI (Ollama - 100% Offline & Kostenlos)",
   "support_ollama_step1": "Installiere Ollama von <strong><a href=\"https://ollama.com\" target=\"_blank\" rel=\"noopener\">ollama.com</a></strong> und lade ein Vision-fähiges Modell herunter (z. B. <span class=\"code-badge\">ollama run moondream</span> oder <span class=\"code-badge\">ollama run llama3.2-vision</span>).",
   "support_ollama_step2": "Starte den Ollama-Server mit CORS-Freigabe für Browsererweiterungen: unter macOS/Linux mit <span class=\"code-badge\">OLLAMA_ORIGINS=\"*\" ollama serve</span> (oder Umgebungsvariable unter Windows).",
@@ -111,10 +116,10 @@
   "support_help_text": "Unser Team überwacht Supportanfragen kontinuierlich. Wenn du auf ein Problem stößt oder einen Feature-Wunsch hast, erstelle bitte ein Issue auf unserem GitHub-Repository.",
   "support_help_cta": "Issue auf GitHub öffnen",
 
-  "footer_tagline": "Der autonome KI-QA-Agent zur automatisierten Fehlerberichterstattung mit lokaler Ollama, Google Gemini & OpenAI Vision in Atlassian Jira.",
+  "footer_tagline": "Der autonome KI-QA-Agent zur automatisierten Fehlerberichterstattung mit Anthropic Claude, Google Gemini, OpenAI & lokaler Ollama Vision in Atlassian Jira.",
   "footer_quick_links": "Direktlinks",
   "footer_resources": "Ressourcen",
   "footer_legal": "Rechtliches & DSGVO",
-  "footer_disclaimer": "BugAgent AI ist ein unabhängiges Produkt und steht in keiner Verbindung zu Atlassian, Google oder OpenAI. Alle Produktnamen, Logos und Marken sind Eigentum ihrer jeweiligen Inhaber.",
+  "footer_disclaimer": "BugAgent AI ist ein unabhängiges Produkt und steht in keiner Verbindung zu Atlassian, Google, OpenAI oder Anthropic. Alle Produktnamen, Logos und Marken sind Eigentum ihrer jeweiligen Inhaber.",
   "footer_rights": "Alle Rechte vorbehalten. Entwickelt für QA-Teams weltweit."
 }

@@ -50,9 +50,9 @@
     "inLanguage": "{{lang_code}}",
     "applicationCategory": "DeveloperApplication",
     "operatingSystem": "Google Chrome, macOS, Windows, Linux, ChromeOS",
-    "softwareVersion": "1.5.0",
+    "softwareVersion": "1.6.0",
     "description": "{{meta_desc}}",
-    "image": "https://bugagentai.com/assets/promo-marquee-1400x560.jpg",
+    "image": "https://bugagentai.com/assets/og-image-1200x630.jpg",
     "downloadUrl": "https://chromewebstore.google.com/detail/ifligmhoakpphcdinajnmefdopaallbl",
     "screenshot": [
       "https://bugagentai.com/assets/screenshot-1-visual-bug-capture-1280x800.jpg",
@@ -64,9 +64,9 @@
     "featureList": [
       "One-Click Visual Bug Capture & Drag-and-Drop Screenshots",
       "Automated Environment Specs Detection (OS, Browser, Viewport, Screen Resolution)",
-      "Triple AI Vision Engine (Ollama Localhost AI, OpenAI GPT-4o & Google Gemini 3.8 Flash)",
-      "100% Client-Side BYOK Encryption and Zero Telemetry (100% Offline Ollama Option)",
-      "Global Keyboard Shortcuts (Cmd+Shift+S / Alt+Shift+S)",
+      "4-Engine AI Vision Hub (Anthropic Claude, Google Gemini 3.8 Flash, OpenAI GPT-4o & Local Ollama)",
+      "100% Client-Side BYOK Local Storage and Zero Telemetry (100% Offline Ollama Option)",
+      "Global Keyboard Shortcuts (Cmd+Shift+S / Alt+Shift+S) & Smarter Capture Error Guidance",
       "GDPR Blur Redaction & Built-in Screenshot Annotation",
       "Atlassian Jira Cloud & Server/Data Center Integration with Error Sanitization"
     ],
@@ -907,7 +907,7 @@
           </div>
           <div class="browser-url-bar">{{hero_url_bar}}</div>
         </div>
-        <img src="{{assets_path}}screenshot-1-visual-bug-capture-1280x800.jpg" alt="BugAgent AI Visual Bug Capture with OpenAI and Gemini in Chrome">
+        <img src="{{assets_path}}screenshot-1-visual-bug-capture-1280x800.jpg" width="1280" height="800" fetchpriority="high" decoding="async" alt="BugAgent AI Visual Bug Capture with Claude, Gemini, OpenAI, and Ollama in Chrome">
       </div>
     </div>
   </section>
@@ -997,11 +997,11 @@
       </div>
 
       <div class="showcase-display">
-        <img id="shot-0" class="active" src="{{assets_path}}screenshot-1-visual-bug-capture-1280x800.jpg" alt="Visual Bug Capture with OpenAI &amp; Gemini in BugAgent AI">
-        <img id="shot-1" src="{{assets_path}}screenshot-2-onboarding-wizard-1280x800.jpg" alt="1-Minute Onboarding Wizard in BugAgent AI">
-        <img id="shot-2" src="{{assets_path}}screenshot-3-dual-ai-settings-1280x800.jpg" alt="Multi-AI Settings and Jira Connection">
-        <img id="shot-3" src="{{assets_path}}screenshot-4-recent-issues-1280x800.jpg" alt="Recent History and In-Browser View">
-        <img id="shot-4" src="{{assets_path}}screenshot-5-global-shortcuts-1280x800.jpg" alt="Knowledge Base and Global Shortcuts">
+        <img id="shot-0" class="active" src="{{assets_path}}screenshot-1-visual-bug-capture-1280x800.jpg" width="1280" height="800" decoding="async" alt="Visual Bug Capture with Claude, Gemini, OpenAI &amp; Ollama in BugAgent AI">
+        <img id="shot-1" src="{{assets_path}}screenshot-2-onboarding-wizard-1280x800.jpg" width="1280" height="800" loading="lazy" decoding="async" alt="1-Minute Onboarding Wizard in BugAgent AI">
+        <img id="shot-2" src="{{assets_path}}screenshot-3-dual-ai-settings-1280x800.jpg" width="1280" height="800" loading="lazy" decoding="async" alt="4-Engine AI Settings and Jira Connection">
+        <img id="shot-3" src="{{assets_path}}screenshot-4-recent-issues-1280x800.jpg" width="1280" height="800" loading="lazy" decoding="async" alt="Recent History and In-Browser View">
+        <img id="shot-4" src="{{assets_path}}screenshot-5-global-shortcuts-1280x800.jpg" width="1280" height="800" loading="lazy" decoding="async" alt="Knowledge Base and Global Shortcuts">
       </div>
     </div>
   </section>
@@ -1103,6 +1103,19 @@
             <li>{{support_openai_step1}}</li>
             <li>{{support_openai_step2}}</li>
             <li>{{support_openai_step3}}</li>
+          </ol>
+        </div>
+
+        <!-- Setup Guide: Anthropic Claude -->
+        <div class="support-card">
+          <h3>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--jira-blue)" stroke-width="2"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9L12 3z"/></svg>
+            {{support_claude_title}}
+          </h3>
+          <ol>
+            <li>{{support_claude_step1}}</li>
+            <li>{{support_claude_step2}}</li>
+            <li>{{support_claude_step3}}</li>
           </ol>
         </div>
 
@@ -1212,9 +1225,11 @@
       const menu = document.getElementById('langMenu');
       if (btn && menu) {
         if (btn.contains(e.target)) {
-          menu.classList.toggle('show');
+          const isOpen = menu.classList.toggle('show');
+          btn.setAttribute('aria-expanded', String(isOpen));
         } else if (!menu.contains(e.target)) {
           menu.classList.remove('show');
+          btn.setAttribute('aria-expanded', 'false');
         }
       }
     });
