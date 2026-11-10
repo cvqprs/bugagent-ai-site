@@ -6,7 +6,6 @@
   "meta_desc": "Automatyzuj raportowanie błędów oprogramowania. Zrzuty ekranu, analiza AI (Anthropic Claude, Google Gemini, OpenAI i lokalna Ollama) oraz błyskawiczne tworzenie zgłoszeń w Jira w kilka sekund.",
   "og_title": "BugAgent AI - Autonomiczny Agent QA i Raportowanie Błędów do Jira",
   "og_desc": "Przechwytuj ekrany, upuszczaj pliki drag & drop, analizuj z Anthropic Claude, Gemini, OpenAI i lokalną Ollamą oraz twórz tickety w Jira natychmiast.",
-  
   "brand_badge": "Inteligentny Asystent QA",
   "nav_features": "Funkcje",
   "nav_screenshots": "Zrzuty ekranu",
@@ -14,7 +13,6 @@
   "nav_support": "Instrukcja & Pomoc",
   "nav_privacy": "Polityka Prywatności",
   "btn_add_to_chrome": "Dodaj do Chrome",
-
   "hero_badge": "🟠 NOWOŚĆ W v1.6.0: ANTHROPIC CLAUDE VISION AI, HUB 4 SILNIKÓW AI I LEPSZY UX PRZECHWYTYWANIA",
   "hero_badge_privacy": "ŚCISŁA PRYWATNOŚĆ (BYOK I LOKALNA AI)",
   "hero_title_prefix": "Automatyzuj raportowanie błędów w Jira w kilka sekund z",
@@ -23,42 +21,35 @@
   "hero_cta_free": "Dodaj do Chrome — Za darmo",
   "hero_cta_demo": "Zobacz interaktywne demo",
   "hero_url_bar": "https://acme-store.com/checkout • Testowanie z BugAgent AI (Claude, Gemini, OpenAI i Ollama)",
-
   "features_tag": "Możliwości Produktu",
   "features_title": "Stworzone dla nowoczesnych zespołów QA i testerów",
   "features_desc": "Wszystko, czego potrzebujesz, aby bez wysiłku rejestrować, analizować, opisywać i raportować regresje wizualne oraz błędy oprogramowania.",
-
   "feat1_title": "Przechwytywanie 1 kliknięciem, Drag & Drop i skróty",
   "feat1_desc": "Przechwytuj widoczną kartę natychmiast jednym przyciskiem, upuszczaj zrzuty ekranu przeciągając pliki, wybieraj z dysku lub użyj globalnych skrótów: <strong>⌘+Shift+S</strong> (macOS) i <strong>Alt+Shift+S</strong> (Windows & Linux).",
-
   "feat2_title": "Hub 4 silników Vision AI (Claude, Gemini, OpenAI i Ollama)",
   "feat2_desc": "Przełączaj się błyskawicznie między <strong>Anthropic Claude</strong> (Sonnet i Haiku), Google Gemini (3.8 Flash), OpenAI (GPT-4o) oraz <strong>lokalną AI Ollama</strong> (100% offline). Generuje hipotezy przyczyn, kroki do odtworzenia i oczekiwane wyniki w 6 językach.",
-
   "feat3_title": "Automatyczna specyfikacja środowiska dla Jiry",
   "feat3_desc": "Automatycznie wykrywa i formatuje system operacyjny, wersję przeglądarki, wymiary okna (viewport) i skalowanie ekranu w czytelną tabelę Jira Wiki bez żadnego ręcznego wpisywania.",
-
   "feat4_title": "Pełny tryb ciemny (Dark Mode) i elegancki motyw",
   "feat4_desc": "Zaprojektowany z myślą o komforcie podczas długich sesji testowych. Przełączaj się błyskawicznie między jasnym motywem a oszczędzającym wzrok trybem ciemnym za pomocą przełącznika w nagłówku.",
-
   "feat5_title": "Wbudowany edytor i zamazywanie danych RODO",
   "feat5_desc": "Rysuj prostokąty, strzałki, opisy tekstowe lub zamazuj wrażliwe dane klientów (RODO/PII, tokeny, maile) bezpośrednio na zrzucie ekranu przed wysłaniem czegokolwiek do Jiry.",
-
   "feat6_title": "100% Prywatności (Lokalna Ollama i BYOK)",
   "feat6_desc": "Pełna kontrola nad danymi. Uruchamiaj analizę wizyjną w 100% lokalnie na własnym komputerze z Ollamą lub użyj własnych kluczy API (BYOK) dla Gemini, OpenAI i Anthropic Claude. Wszystkie dane pozostają wyłącznie lokalnie w Twojej przeglądarce. Zero śledzenia.",
-
   "showcase_tag": "Interaktywny Podgląd",
   "showcase_title": "Zobacz BugAgent AI w akcji",
   "showcase_desc": "Zaprojektowany tak, aby działać w bocznym panelu Chrome (Side Panel) bez zasłaniania testowanej strony www.",
+  "tab_video_title": "▶ Demo Wideo na żywo (35s)",
   "tab0_title": "1. Tworzenie Zgłoszenia (4 silniki AI)",
   "tab1_title": "2. Szybki Start (Onboarding)",
   "tab2_title": "3. Ustawienia 4 silników AI i Ollama",
   "tab3_title": "4. Historia Zgłoszeń Jira",
   "tab4_title": "5. Lokalna AI i Baza Wiedzy",
-
+  "demo_media_note": "Pełne 35s demo: HTTP 404 + błąd Console → analiza Claude → ticket Jira",
+  "demo_download_label": "Bezpośrednie pliki:",
   "pricing_tag": "Prosty, przejrzysty cennik",
   "pricing_title": "Zacznij za darmo, odblokuj pełną moc",
   "pricing_desc": "Testuj i raportuj defekty z pełną analizą AI w planie bezpłatnym lub odblokuj nielimitowane zgłoszenia dla intensywnych procesów QA.",
-
   "free_tier_name": "Pakiet Darmowy",
   "free_tier_price": "$0",
   "free_tier_period": "/ miesiąc",
@@ -69,7 +60,6 @@
   "free_feat_4": "Pełny tryb ciemny i anonimizacja RODO",
   "free_feat_5": "Wsparcie dla Jira Cloud oraz Server/Data Center",
   "free_cta": "Rozpocznij Za Darmo",
-
   "pro_tier_badge": "NAJPOPULARNIEJSZY",
   "pro_tier_name": "Pakiet PRO",
   "pro_tier_price": "$8.99",
@@ -81,41 +71,33 @@
   "pro_feat_4": "Priorytetowy dostęp do nowych funkcji i aktualizacji",
   "pro_feat_5": "Bezpieczne płatności obsługiwane przez Stripe i ExtensionPay",
   "pro_cta": "Przejdź na PRO",
-
   "support_tag": "Szybki Start",
   "support_title": "Instrukcja konfiguracji i połączenia",
   "support_desc": "Skorzystaj z prostych przewodników, aby połączyć BugAgent AI ze swoją przestrzenią Atlassian Jira i modelami AI w mniej niż 2 minuty.",
-
   "support_jira_title": "Jak połączyć Jira Cloud oraz Server/Data Center",
   "support_jira_step1": "Otwórz boczny panel rozszerzenia i przejdź do <strong>Ustawienia (Settings)</strong> &rarr; <strong>Jira Connection</strong>.",
   "support_jira_step2": "Wpisz adres swojej instancji Jira (np. <span class=\"code-badge\">https://twoja-firma.atlassian.net</span> lub domenę własną).",
   "support_jira_step3": "Dla Jira Cloud: Wpisz adres e-mail konta Atlassian oraz <strong>API Token</strong> wygenerowany na <a href=\"https://id.atlassian.com/manage-profile/security/api-tokens\" target=\"_blank\" rel=\"noopener\">id.atlassian.com</a>.<br>Dla Server/Data Center: Wybierz <strong>Personal Access Token (PAT)</strong> i wklej swój token.",
   "support_jira_step4": "Kliknij <strong>Test Jira Connection</strong>. Po pomyślnej weryfikacji kliknij <strong>Save Settings</strong>.",
-
   "support_gemini_title": "Jak zdobyć klucz Google Gemini API Key",
   "support_gemini_step1": "Wejdź na stronę <strong><a href=\"https://aistudio.google.com/app/apikey\" target=\"_blank\" rel=\"noopener\">Google AI Studio (aistudio.google.com)</a></strong> i zaloguj się kontem Google.",
   "support_gemini_step2": "Kliknij <strong>Create API key</strong>, wybierz projekt Google Cloud i skopiuj wygenerowany klucz.",
   "support_gemini_step3": "Wklej klucz w Ustawieniach w pole <strong>Gemini Vision Key</strong> i kliknij <strong>Save Settings</strong>.",
-
   "support_openai_title": "Jak zdobyć klucz OpenAI API Key (GPT-4o i GPT-4o-mini)",
   "support_openai_step1": "Odwiedź platformę <strong><a href=\"https://platform.openai.com/api-keys\" target=\"_blank\" rel=\"noopener\">OpenAI Developer Platform (platform.openai.com)</a></strong> i zaloguj się.",
   "support_openai_step2": "Kliknij <strong>Create new secret key</strong>, nadaj mu nazwę identyfikacyjną (np. <em>BugAgent AI</em>) i kliknij <strong>Create secret key</strong>.",
   "support_openai_step3": "Skopiuj klucz (zaczyna się od <span class=\"code-badge\">sk-...</span>), wklej w Ustawieniach &rarr; <strong>OpenAI Vision Key</strong> i kliknij <strong>Save Settings</strong>.",
-
   "support_claude_title": "Jak zdobyć klucz Anthropic Claude API Key (Sonnet i Haiku)",
   "support_claude_step1": "Odwiedź platformę <strong><a href=\"https://console.anthropic.com/settings/keys\" target=\"_blank\" rel=\"noopener noreferrer\">Anthropic Console (console.anthropic.com)</a></strong> i zaloguj się na swoje konto.",
   "support_claude_step2": "Kliknij <strong>Create Key</strong>, nadaj kluczowi nazwę identyfikacyjną (np. <em>BugAgent AI</em>) i kliknij <strong>Add</strong>.",
   "support_claude_step3": "Skopiuj klucz (zaczyna się od <span class=\"code-badge\">sk-ant-...</span>), wklej w Ustawieniach &rarr; <strong>Klucz Claude API Key</strong>, wybierz Sonnet lub Haiku i kliknij <strong>Save Settings</strong>.",
-
   "support_ollama_title": "Jak korzystać z Localhost AI (Ollama - 100% Offline i Za Darmo)",
   "support_ollama_step1": "Zainstaluj Ollama ze strony <strong><a href=\"https://ollama.com\" target=\"_blank\" rel=\"noopener\">ollama.com</a></strong> i pobierz model z obsługą widzenia (np. <span class=\"code-badge\">ollama run moondream</span> lub <span class=\"code-badge\">ollama run llama3.2-vision</span>).",
   "support_ollama_step2": "Uruchom serwer Ollama z dozwolonym CORS dla rozszerzeń: na macOS/Linux uruchom <span class=\"code-badge\">OLLAMA_ORIGINS=\"*\" ollama serve</span> (lub ustaw zmienną środowiskową na Windows).",
   "support_ollama_step3": "W Ustawieniach BugAgent AI wybierz <strong>Localhost AI (Ollama)</strong>, sprawdź adres (<span class=\"code-badge\">http://localhost:11434</span>), kliknij <strong>Fetch Models</strong> aby wybrać model wizyjny i zapisz ustawienia.",
-
   "support_help_title": "Potrzebujesz pomocy lub znalazłeś błąd?",
   "support_help_text": "Nasz zespół na bieżąco monitoruje zgłoszenia. Jeśli napotkasz problem z działaniem wtyczki, autoryzacją API lub masz propozycję nowej funkcji, otwórz zgłoszenie w naszym repozytorium GitHub.",
   "support_help_cta": "Zgłoś problem na GitHub",
-
   "footer_tagline": "Autonomiczny agent QA AI, który automatyzuje raportowanie defektów z użyciem Anthropic Claude, Google Gemini, OpenAI i lokalnej Ollamy do Atlassian Jira.",
   "footer_quick_links": "Szybkie linki",
   "footer_resources": "Zasoby",

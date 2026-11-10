@@ -153,13 +153,29 @@
       background-color: var(--bg-app);
       color: var(--text-main);
       line-height: 1.6;
+      overflow-wrap: anywhere;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
+    }
+
+    img, video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    h1, h2, h3 {
+      text-wrap: balance;
     }
 
     a {
       color: inherit;
       text-decoration: none;
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 2px solid var(--jira-blue);
+      outline-offset: 2px;
     }
 
     .container {
@@ -181,7 +197,8 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 72px;
+      min-height: 72px;
+      padding-block: 10px;
       gap: 16px;
     }
 
@@ -190,6 +207,7 @@
       align-items: center;
       gap: 12px;
       text-decoration: none;
+      min-width: 0;
     }
 
     .brand img {
@@ -467,6 +485,7 @@
     .browser-dots {
       display: flex;
       gap: 6px;
+      flex-shrink: 0;
     }
 
     .browser-dot {
@@ -481,17 +500,21 @@
 
     .browser-url-bar {
       flex: 1;
+      min-width: 0;
+      display: block;
       height: 24px;
+      line-height: 22px;
       background-color: #ffffff;
       border: 1px solid var(--border-light);
       border-radius: 4px;
       font-size: 11px;
       color: var(--text-muted);
-      display: flex;
-      align-items: center;
       padding: 0 10px;
       max-width: 480px;
       margin: 0 auto;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     .hero-mockup-wrapper img {
@@ -621,14 +644,56 @@
       overflow: hidden;
     }
 
-    .showcase-display img {
+    .showcase-display .showcase-media {
       width: 100%;
       height: auto;
       display: none;
+      background: #f8fafc;
     }
 
-    .showcase-display img.active {
+    .showcase-display .showcase-media.active {
       display: block;
+    }
+
+    .showcase-media-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px 16px;
+      padding: 12px 18px;
+      border-top: 1px solid var(--border-light);
+      background: var(--surface-subtle);
+      font-size: 13px;
+      color: var(--text-secondary);
+    }
+
+    .showcase-media-links {
+      display: inline-flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      font-size: 12.5px;
+      color: var(--text-muted);
+    }
+
+    .media-pill-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 4px 10px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-medium);
+      background: #ffffff;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--jira-blue);
+      transition: border-color 0.15s ease, background-color 0.15s ease;
+    }
+
+    .media-pill-link:hover {
+      border-color: var(--jira-blue);
+      background: var(--jira-blue-subtle);
     }
 
     .pricing-grid {
@@ -744,7 +809,7 @@
       gap: 10px;
     }
 
-    .support-card a {
+    .support-card a:not(.btn) {
       color: var(--jira-blue);
       text-decoration: underline;
     }
@@ -757,6 +822,7 @@
       padding: 2px 6px;
       border-radius: 4px;
       color: var(--jira-blue);
+      overflow-wrap: anywhere;
     }
 
     footer {
@@ -825,10 +891,246 @@
     }
 
     @media (max-width: 768px) {
-      .hero-title { font-size: 32px; }
-      .nav-links { display: none; }
-      .hero-subtitle { font-size: 16px; }
-      .features-grid { grid-template-columns: 1fr; }
+      .container {
+        padding: 0 16px;
+      }
+
+      .navbar {
+        min-height: 60px;
+        padding-block: 8px;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+
+      header .brand-badge {
+        display: none;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .nav-actions {
+        gap: 8px;
+        margin-inline-start: auto;
+      }
+
+      .lang-btn {
+        min-height: 40px;
+        padding: 6px 10px;
+        font-size: 12.5px;
+      }
+
+      .nav-actions .btn-primary {
+        min-height: 40px;
+        padding: 8px 12px;
+        font-size: 13px;
+        white-space: nowrap;
+      }
+
+      .hero {
+        padding: 32px 0 36px;
+      }
+
+      .badge-pill {
+        flex-direction: column;
+        gap: 4px;
+        border-radius: 12px;
+        padding: 10px 14px;
+        text-align: center;
+        margin-bottom: 18px;
+      }
+
+      .badge-dot {
+        display: none;
+      }
+
+      .hero-title {
+        font-size: 32px;
+        margin-bottom: 14px;
+      }
+
+      .hero-subtitle {
+        font-size: 16px;
+        margin-bottom: 24px;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 32px;
+      }
+
+      .hero-actions .btn {
+        width: 100%;
+        max-width: 340px;
+        min-height: 48px;
+        justify-content: center;
+      }
+
+      .browser-bar {
+        padding: 0 10px;
+        gap: 8px;
+      }
+
+      .section {
+        padding: 48px 0;
+      }
+
+      .section-header {
+        margin-bottom: 32px;
+      }
+
+      .section-title {
+        font-size: 26px;
+      }
+
+      .section-desc {
+        font-size: 15.5px;
+      }
+
+      .features-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .feature-card {
+        padding: 24px 20px;
+      }
+
+      .showcase-tabs {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+        max-width: 420px;
+        margin-inline: auto;
+        margin-bottom: 20px;
+      }
+
+      .tab-btn {
+        width: 100%;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 10px 14px;
+      }
+
+      .showcase-media-bar {
+        padding: 12px 14px;
+        font-size: 12.5px;
+      }
+
+      .showcase-media-links {
+        gap: 6px;
+        font-size: 12px;
+      }
+
+      .media-pill-link {
+        min-height: 34px;
+        padding: 5px 9px;
+        font-size: 11.5px;
+        white-space: nowrap;
+      }
+
+      .pricing-grid {
+        gap: 24px;
+      }
+
+      .pricing-card {
+        padding: 26px 20px;
+      }
+
+      .pricing-card .btn {
+        min-height: 46px;
+      }
+
+      .support-card {
+        padding: 22px 18px;
+      }
+
+      .support-card .btn {
+        width: 100%;
+        min-height: 46px;
+        justify-content: center;
+      }
+
+      footer {
+        padding: 40px 0 24px;
+      }
+
+      .footer-content {
+        gap: 28px;
+        margin-bottom: 28px;
+      }
+
+      .footer-links {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+      }
+
+      .footer-col h4 {
+        font-size: 12.5px;
+        line-height: 1.35;
+        min-height: 34px;
+        margin-bottom: 10px;
+      }
+
+      .footer-col a {
+        display: inline-flex;
+        align-items: center;
+        min-height: 36px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .navbar {
+        gap: 6px;
+      }
+
+      .brand {
+        gap: 6px;
+      }
+
+      .brand img {
+        width: 28px;
+        height: 28px;
+      }
+
+      .brand-title {
+        font-size: 14px;
+        white-space: nowrap;
+      }
+
+      .nav-actions {
+        gap: 6px;
+      }
+
+      .lang-btn {
+        padding: 6px 7px;
+        gap: 4px;
+        font-size: 11.5px;
+      }
+
+      .nav-actions .btn-primary {
+        padding: 8px;
+        font-size: 11.5px;
+      }
+
+      .nav-actions .btn-primary svg {
+        display: none;
+      }
+    }
+
+    @media (max-width: 359px) {
+      .footer-links {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
     }
   </style>
 
@@ -887,7 +1189,7 @@
     <div class="container">
       <div class="badge-pill">
         <span>🟠 v1.6.0新機能: ANTHROPIC CLAUDE VISION AI、4エンジンハブ＆スマートなエラー案内</span>
-        <span>•</span>
+        <span class="badge-dot" aria-hidden="true">•</span>
         <span>完全なプライバシー (BYOK & ローカルAI)</span>
       </div>
       <h1 class="hero-title">BugAgent AI で Jira のバグ報告を数秒で <span>自動化する</span></h1>
@@ -994,19 +1296,45 @@
       </div>
 
       <div class="showcase-tabs">
-        <button class="tab-btn active" onclick="switchTab(0)">1. バグ作成 (4エンジンAI)</button>
-        <button class="tab-btn" onclick="switchTab(1)">2. 1分間オンボーディング</button>
-        <button class="tab-btn" onclick="switchTab(2)">3. 4エンジンAI & Ollama設定</button>
-        <button class="tab-btn" onclick="switchTab(3)">4. Jira送信履歴・共有</button>
-        <button class="tab-btn" onclick="switchTab(4)">5. ローカルAIとガイド</button>
+        <button type="button" class="tab-btn active" onclick="switchTab(0)">▶ ライブ動画デモ (35秒)</button>
+        <button type="button" class="tab-btn" onclick="switchTab(1)">1. バグ作成 (4エンジンAI)</button>
+        <button type="button" class="tab-btn" onclick="switchTab(2)">2. 1分間オンボーディング</button>
+        <button type="button" class="tab-btn" onclick="switchTab(3)">3. 4エンジンAI & Ollama設定</button>
+        <button type="button" class="tab-btn" onclick="switchTab(4)">4. Jira送信履歴・共有</button>
+        <button type="button" class="tab-btn" onclick="switchTab(5)">5. ローカルAIとガイド</button>
       </div>
 
       <div class="showcase-display">
-        <img id="shot-0" class="active" src="../assets/screenshot-1-visual-bug-capture-1280x800.jpg" width="1280" height="800" decoding="async" alt="Visual Bug Capture with Claude, Gemini, OpenAI &amp; Ollama in BugAgent AI">
-        <img id="shot-1" src="../assets/screenshot-2-onboarding-wizard-1280x800.jpg" width="1280" height="800" loading="lazy" decoding="async" alt="1-Minute Onboarding Wizard in BugAgent AI">
-        <img id="shot-2" src="../assets/screenshot-3-dual-ai-settings-1280x800.jpg" width="1280" height="800" loading="lazy" decoding="async" alt="4-Engine AI Settings and Jira Connection">
-        <img id="shot-3" src="../assets/screenshot-4-recent-issues-1280x800.jpg" width="1280" height="800" loading="lazy" decoding="async" alt="Recent History and In-Browser View">
-        <img id="shot-4" src="../assets/screenshot-5-global-shortcuts-1280x800.jpg" width="1280" height="800" loading="lazy" decoding="async" alt="Knowledge Base and Global Shortcuts">
+        <video
+          id="shot-0"
+          class="showcase-media active"
+          controls
+          loading="lazy"
+          autoplay
+          loop
+          muted
+          playsinline
+          preload="metadata"
+          width="1280"
+          height="736"
+          poster="../assets/demo-poster-1280x736.jpg"
+        >
+          <source src="../assets/bugagent-ai-demo-v1.6.mp4" type="video/mp4">
+          <a href="../assets/bugagent-ai-demo-v1.6.gif">BugAgent AI Demo (GIF)</a>
+        </video>
+        <img id="shot-1" class="showcase-media" src="../assets/screenshot-1-visual-bug-capture-1280x800.jpg" width="1280" height="800" loading="lazy" decoding="async" alt="Visual Bug Capture with Claude, Gemini, OpenAI &amp; Ollama in BugAgent AI">
+        <img id="shot-2" class="showcase-media" src="../assets/screenshot-2-onboarding-wizard-1280x800.jpg" width="1280" height="800" loading="lazy" decoding="async" alt="1-Minute Onboarding Wizard in BugAgent AI">
+        <img id="shot-3" class="showcase-media" src="../assets/screenshot-3-dual-ai-settings-1280x800.jpg" width="1280" height="800" loading="lazy" decoding="async" alt="4-Engine AI Settings and Jira Connection">
+        <img id="shot-4" class="showcase-media" src="../assets/screenshot-4-recent-issues-1280x800.jpg" width="1280" height="800" loading="lazy" decoding="async" alt="Recent History and In-Browser View">
+        <img id="shot-5" class="showcase-media" src="../assets/screenshot-5-global-shortcuts-1280x800.jpg" width="1280" height="800" loading="lazy" decoding="async" alt="Knowledge Base and Global Shortcuts">
+        <div class="showcase-media-bar">
+          <span>35秒デモ：HTTP 404 + コンソールエラー → Claude解析 → Jira起票</span>
+          <div class="showcase-media-links">
+            <span>直接ファイル:</span>
+            <a class="media-pill-link" href="../assets/bugagent-ai-demo-v1.6.mp4" target="_blank" rel="noopener" data-umami-event="Demo Video Open MP4">MP4 (1.7 MB)</a>
+            <a class="media-pill-link" href="../assets/bugagent-ai-demo-v1.6.gif" target="_blank" rel="noopener" data-umami-event="Demo Video Open GIF">GIF (4.4 MB)</a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -1212,17 +1540,46 @@
         }
       });
 
-      for (let i = 0; i < 5; i++) {
-        const img = document.getElementById('shot-' + i);
-        if (img) {
+      const demoVideo = document.getElementById('shot-0');
+      for (let i = 0; i < 6; i++) {
+        const media = document.getElementById('shot-' + i);
+        if (media) {
           if (i === index) {
-            img.classList.add('active');
+            media.classList.add('active');
           } else {
-            img.classList.remove('active');
+            media.classList.remove('active');
           }
         }
       }
+
+      if (demoVideo && typeof demoVideo.pause === 'function') {
+        if (index === 0) {
+          const reducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+          if (!reducedMotion) {
+            demoVideo.play().catch(function() {});
+          }
+        } else {
+          demoVideo.pause();
+        }
+      }
     }
+
+    (function() {
+      if (!window.matchMedia) return;
+      const reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+      function syncReducedMotion(prefersReducedMotion) {
+        document.querySelectorAll('video[autoplay]').forEach(function(video) {
+          if (prefersReducedMotion) {
+            video.removeAttribute('autoplay');
+            video.pause();
+          }
+        });
+      }
+      syncReducedMotion(reducedMotionQuery.matches);
+      reducedMotionQuery.addEventListener('change', function(event) {
+        syncReducedMotion(event.matches);
+      });
+    })();
 
     // Language Dropdown Interactive Toggle
     document.addEventListener('click', function(e) {

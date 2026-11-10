@@ -5,7 +5,7 @@
   <!-- 1. English (Default Root) -->
   <url>
     <loc>https://bugagentai.com/</loc>
-    <lastmod>2026-11-09</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://bugagentai.com/"/>
@@ -20,7 +20,7 @@
   <!-- 2. German (DACH Market) -->
   <url>
     <loc>https://bugagentai.com/de/</loc>
-    <lastmod>2026-11-09</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://bugagentai.com/"/>
@@ -35,7 +35,7 @@
   <!-- 3. Polish (CEE Market) -->
   <url>
     <loc>https://bugagentai.com/pl/</loc>
-    <lastmod>2026-11-09</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://bugagentai.com/"/>
@@ -50,7 +50,7 @@
   <!-- 4. Spanish (ES & LATAM Market) -->
   <url>
     <loc>https://bugagentai.com/es/</loc>
-    <lastmod>2026-11-09</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://bugagentai.com/"/>
@@ -65,7 +65,7 @@
   <!-- 5. French (FR Market) -->
   <url>
     <loc>https://bugagentai.com/fr/</loc>
-    <lastmod>2026-11-09</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://bugagentai.com/"/>
@@ -80,7 +80,7 @@
   <!-- 6. Japanese (Japan Market) -->
   <url>
     <loc>https://bugagentai.com/ja/</loc>
-    <lastmod>2026-11-09</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://bugagentai.com/"/>

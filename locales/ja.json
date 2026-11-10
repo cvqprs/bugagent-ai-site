@@ -6,7 +6,6 @@
   "meta_desc": "ソフトウェアのバグ報告を自動化。画面キャプチャ、Anthropic Claude・Google Gemini・OpenAI・ローカルOllamaによるAI解析、そして数秒でのJiraチケット作成を実現します。",
   "og_title": "BugAgent AI - 自律型AI QAエージェント & Jiraバグ報告ツール",
   "og_desc": "画面キャプチャ、ドラッグ＆ドロップ、Anthropic Claude・Gemini・OpenAI・ローカルOllamaによるAI解析、リッチなJiraチケットを瞬時に作成。",
-  
   "brand_badge": "スマートQAアシスタント",
   "nav_features": "機能",
   "nav_screenshots": "画面イメージ",
@@ -14,7 +13,6 @@
   "nav_support": "設定とサポート",
   "nav_privacy": "プライバシーポリシー",
   "btn_add_to_chrome": "Chromeに追加",
-
   "hero_badge": "🟠 v1.6.0新機能: ANTHROPIC CLAUDE VISION AI、4エンジンハブ＆スマートなエラー案内",
   "hero_badge_privacy": "完全なプライバシー (BYOK & ローカルAI)",
   "hero_title_prefix": "BugAgent AI で Jira のバグ報告を数秒で",
@@ -23,42 +21,35 @@
   "hero_cta_free": "Chromeに追加 — 無料",
   "hero_cta_demo": "インタラクティブデモを見る",
   "hero_url_bar": "https://acme-store.com/checkout • BugAgent AI でテスト中 (Claude, Gemini, OpenAI & Ollama)",
-
   "features_tag": "主な機能と特徴",
   "features_title": "現代のQAチームとソフトウェアテスターのために構築",
   "features_desc": "UIのリグレッションやソフトウェアの不具合をシームレスにキャプチャ、解析、注釈付け、報告するために必要なすべてが揃っています。",
-
   "feat1_title": "ワンクリック、ドラッグ＆ドロップとショートカット",
   "feat1_desc": "ワンクリックで表示中のタブを即座にキャプチャ、スクリーンショットを直接ドラッグ＆ドロップ、またはグローバルショートカット：<strong>⌘+Shift+S</strong>（macOS）および <strong>Alt+Shift+S</strong>（Win/Linux）を利用可能。",
-
   "feat2_title": "4エンジン Vision AI ハブ（Claude, Gemini, OpenAI & Ollama）",
   "feat2_desc": "<strong>Anthropic Claude</strong>（Sonnet &amp; Haiku）、Google Gemini（3.8 Flash）、OpenAI（GPT-4o）、<strong>OllamaローカルAI</strong>（100%オフライン）を自在に切り替え。根本原因の仮説や再現手順を6言語で自動生成します。",
-
   "feat3_title": "Jira向け動作環境スペックの自動検出",
   "feat3_desc": "OS、ブラウザのバージョン、ビューポート解像度、Retinaスケーリング比率を自動抽出し、手入力不要で美しいJira Wiki形式のテーブルとして整形します。",
-
   "feat4_title": "完全なダークモードと洗練されたUI",
   "feat4_desc": "長時間のQAテストセッションでも目に優しい設計。ヘッダーの専用トグルで、明るいライトモードとバッテリー消費を抑えるダークモードをワンタッチで切り替えられます。",
-
   "feat5_title": "内蔵アノテーションとGDPR準拠ぼかし機能",
   "feat5_desc": "Jiraに送信する前に、スクリーンショット上に矩形、矢印、テキスト注釈を描画したり、顧客の機密データ（個人情報、トークン、メールアドレス）を直接ぼかすことができます。",
-
   "feat6_title": "100%プライバシー（ローカルOllama & BYOK）",
   "feat6_desc": "データに対する完全な制御。Ollamaを使用して端末内のみでビジョン解析を実行するか、Gemini・OpenAI・Anthropic Claudeに自身のAPIキーを使用（BYOK）。すべての認証情報はブラウザ内のローカルストレージに保持され、追跡は一切行われません。",
-
   "showcase_tag": "インタラクティブプレビュー",
   "showcase_title": "BugAgent AI の実際の動作を見る",
   "showcase_desc": "Chromeの常駐サイドパネルに最適化されており、テスト中の画面を遮ることなく快適に操作できます。",
+  "tab_video_title": "▶ ライブ動画デモ (35秒)",
   "tab0_title": "1. バグ作成 (4エンジンAI)",
   "tab1_title": "2. 1分間オンボーディング",
   "tab2_title": "3. 4エンジンAI & Ollama設定",
   "tab3_title": "4. Jira送信履歴・共有",
   "tab4_title": "5. ローカルAIとガイド",
-
+  "demo_media_note": "35秒デモ：HTTP 404 + コンソールエラー → Claude解析 → Jira起票",
+  "demo_download_label": "直接ファイル:",
   "pricing_tag": "シンプルで明瞭な料金体系",
   "pricing_title": "無料でスタート、必要に応じてアップグレード",
   "pricing_desc": "無料プランでも全AIビジョン解析を利用してバグを報告可能。より大規模なQAプロセスには無制限プランを提供します。",
-
   "free_tier_name": "無料プラン",
   "free_tier_price": "$0",
   "free_tier_period": "/ 月",
@@ -69,7 +60,6 @@
   "free_feat_4": "ダークモード & GDPR準拠のぼかし",
   "free_feat_5": "Jira Cloud および Server/Data Center 対応",
   "free_cta": "無料で始める",
-
   "pro_tier_badge": "一番人気",
   "pro_tier_name": "PROプラン",
   "pro_tier_price": "$8.99",
@@ -81,41 +71,33 @@
   "pro_feat_4": "新機能およびアップデートへの優先アクセス",
   "pro_feat_5": "Stripe & ExtensionPay による安全な決済",
   "pro_cta": "PROにアップグレード",
-
   "support_tag": "クイックスタートガイド",
   "support_title": "設定および接続手順",
   "support_desc": "わずか2分でBugAgent AIをJiraワークスペースおよび各種AIエンジンに接続できます。",
-
   "support_jira_title": "Jira Cloud および Server/Data Center の接続方法",
   "support_jira_step1": "拡張機能のサイドパネルを開き、<strong>Settings</strong> &rarr; <strong>Jira Connection</strong> に移動します。",
   "support_jira_step2": "JiraインスタンスのURLを入力します（例: <span class=\"code-badge\">https://your-company.atlassian.net</span> または独自ドメイン）。",
   "support_jira_step3": "Jira Cloudの場合: Atlassianアカウントのメールと <a href=\"https://id.atlassian.com/manage-profile/security/api-tokens\" target=\"_blank\" rel=\"noopener\">id.atlassian.com</a> で作成した <strong>APIトークン</strong> を入力。<br>Server/Data Centerの場合: <strong>Personal Access Token (PAT)</strong> を選択してトークンを貼り付け。",
   "support_jira_step4": "<strong>Test Jira Connection</strong> をクリック。接続が確認できたら <strong>Save Settings</strong> をクリックします。",
-
   "support_gemini_title": "Google Gemini APIキーの取得方法",
   "support_gemini_step1": "<strong><a href=\"https://aistudio.google.com/app/apikey\" target=\"_blank\" rel=\"noopener\">Google AI Studio (aistudio.google.com)</a></strong> にアクセスし、Googleアカウントでログインします。",
   "support_gemini_step2": "<strong>Create API key</strong> をクリックし、Google Cloudプロジェクトを選択して生成されたキーをコピーします。",
   "support_gemini_step3": "設定画面の <strong>Gemini Vision Key</strong> に貼り付け、<strong>Save Settings</strong> をクリックします。",
-
   "support_openai_title": "OpenAI APIキー (GPT-4o & GPT-4o-mini) の取得方法",
   "support_openai_step1": "<strong><a href=\"https://platform.openai.com/api-keys\" target=\"_blank\" rel=\"noopener\">OpenAI Developer Platform (platform.openai.com)</a></strong> にアクセスしてログインします。",
   "support_openai_step2": "<strong>Create new secret key</strong> をクリックし、キーの名前（例: <em>BugAgent AI</em>）を入力して作成します。",
   "support_openai_step3": "キー（<span class=\"code-badge\">sk-...</span> で始まる文字列）をコピーし、設定の <strong>OpenAI Vision Key</strong> に貼り付けて <strong>Save Settings</strong> をクリックします。",
-
   "support_claude_title": "Anthropic Claude APIキー（Sonnet & Haiku）の取得方法",
   "support_claude_step1": "<strong><a href=\"https://console.anthropic.com/settings/keys\" target=\"_blank\" rel=\"noopener noreferrer\">Anthropic Console (console.anthropic.com)</a></strong> にアクセスしてログインします。",
   "support_claude_step2": "<strong>Create Key</strong> をクリックし、キー名（例: <em>BugAgent AI</em>）を入力して <strong>Add</strong> をクリックします。",
   "support_claude_step3": "キー（<span class=\"code-badge\">sk-ant-...</span> で始まる文字列）を設定画面の <strong>Claude API キー</strong> に貼り付け、Sonnet または Haiku を選択して <strong>Save Settings</strong> をクリックします。",
-
   "support_ollama_title": "ローカルAI（Ollama - 完全オフライン・無料）の設定方法",
   "support_ollama_step1": "<strong><a href=\"https://ollama.com\" target=\"_blank\" rel=\"noopener\">ollama.com</a></strong> からOllamaをインストールし、ビジョン対応モデル（例: <span class=\"code-badge\">ollama run moondream</span> または <span class=\"code-badge\">ollama run llama3.2-vision</span>）を取得します。",
   "support_ollama_step2": "ブラウザ拡張用のCORSを許可して起動します: macOS/Linuxでは <span class=\"code-badge\">OLLAMA_ORIGINS=\"*\" ollama serve</span> を実行（Windowsでは環境変数を設定）。",
   "support_ollama_step3": "BugAgent AIの設定で <strong>Localhost AI (Ollama)</strong> を選択し、<strong>Fetch Models</strong> をクリックしてビジョンモデルを選択し、保存します。",
-
   "support_help_title": "サポートが必要な場合や不具合を見つけた場合",
   "support_help_text": "開発チームはサポートや問題報告を継続的に確認しています。動作不良や機能の要望がある場合は、GitHubリポジトリでIssueを作成してください。",
   "support_help_cta": "GitHubでIssueを作成",
-
   "footer_tagline": "Anthropic Claude、Google Gemini、OpenAI、ローカルOllamaを活用してAtlassian Jiraへのバグ報告を自動化する自律型AI QAエージェント。",
   "footer_quick_links": "クイックリンク",
   "footer_resources": "リソース",
