@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>NovaCloud Pro — Upgrade Checkout</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232563eb'/%3E%3Cpath d='M10.5 21.5h11a4 4 0 0 0 .6-7.95A5.5 5.5 0 0 0 11.4 12a4.5 4.5 0 0 0-.9 8.95z' fill='%23ffffff'/%3E%3C/svg%3E">
+  <style>
+    :root {
+      --bg-page: #f1f5f9;
+      --bg-card: #ffffff;
+      --bg-subtle: #f8fafc;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --text-soft: #64748b;
+      --border-default: #e2e8f0;
+      --border-strong: #cbd5e1;
+      --primary: #2563eb;
+      --primary-hover: #1d4ed8;
+      --danger: #dc2626;
+      --danger-bg: #fef2f2;
+      --danger-border: #fca5a5;
+      --success: #059669;
+      --shadow-card: 0 10px 28px -10px rgba(15, 23, 42, 0.12), 0 2px 8px -2px rgba(15, 23, 42, 0.06);
+      --radius-lg: 14px;
+      --radius-md: 10px;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, Helvetica, Arial, sans-serif;
+      font-size: 1rem;
+      line-height: 1.5;
+      color: var(--text-main);
+      background:
+        radial-gradient(circle at 12% 8%, rgba(37, 99, 235, 0.07), transparent 42%),
+        radial-gradient(circle at 90% 90%, rgba(15, 23, 42, 0.05), transparent 40%),
+        var(--bg-page);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .topbar {
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--border-default);
+      padding: 0.75rem 1.5rem;
+    }
+
+    .topbar-inner {
+      max-width: 920px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.625rem;
+      font-weight: 700;
+      font-size: 1.05rem;
+      letter-spacing: -0.015em;
+      color: var(--text-main);
+    }
+
+    .brand-badge {
+      width: 30px;
+      height: 30px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #2563eb, #1e40af);
+      display: grid;
+      place-items: center;
+      color: #ffffff;
+      font-weight: 800;
+      font-size: 0.875rem;
+    }
+
+    .topbar-meta {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .env-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 999px;
+      background: #eff6ff;
+      color: #1d4ed8;
+      font-weight: 600;
+      font-size: 0.75rem;
+      border: 1px solid #bfdbfe;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 920px;
+      margin: 1.75rem auto 1rem;
+      padding: 0 1.25rem;
+      flex: 1;
+    }
+
+    .page-header {
+      margin-bottom: 1.25rem;
+    }
+
+    .page-header h1 {
+      margin: 0 0 0.25rem;
+      font-size: 1.5rem;
+      font-weight: 750;
+      letter-spacing: -0.02em;
+    }
+
+    .page-header p {
+      margin: 0;
+      color: var(--text-muted);
+      font-size: 0.925rem;
+    }
+
+    .checkout-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+      gap: 1.25rem;
+      align-items: start;
+    }
+
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-default);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-card);
+      padding: 1.35rem;
+    }
+
+    .card-title {
+      margin: 0 0 1rem;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+      margin-block-end: 1rem;
+    }
+
+    .field-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+      margin-block-end: 1rem;
+    }
+
+    .field-row .field {
+      margin-block-end: 0;
+    }
+
+    label {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    input[type="text"],
+    input[type="email"] {
+      width: 100%;
+      min-height: 44px;
+      padding: 0.55rem 0.75rem;
+      border: 1px solid var(--border-strong);
+      border-radius: 8px;
+      font: inherit;
+      font-size: max(1rem, 0.95em);
+      color: var(--text-main);
+      background: #ffffff;
+      transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    input[readonly] {
+      background: var(--bg-subtle);
+      color: var(--text-muted);
+    }
+
+    .mono-value {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 0.875rem;
+    }
+
+    input:focus-visible,
+    button:focus-visible {
+      outline: 3px solid #2563eb;
+      outline-offset: 2px;
+    }
+
+    .promo-group {
+      display: flex;
+      gap: 0.5rem;
+      align-items: stretch;
+    }
+
+    .promo-group input {
+      flex: 1;
+      text-transform: uppercase;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+
+    .btn-secondary {
+      min-height: 44px;
+      padding: 0 1rem;
+      border-radius: 8px;
+      border: 1px solid var(--border-strong);
+      background: var(--bg-subtle);
+      color: var(--text-main);
+      font: inherit;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background 0.15s ease, border-color 0.15s ease;
+    }
+
+    .btn-secondary:hover {
+      background: #e2e8f0;
+    }
+
+    fieldset {
+      border: 1px solid var(--border-default);
+      border-radius: var(--radius-md);
+      padding: 0.75rem 0.9rem;
+      margin: 0;
+      background: var(--bg-subtle);
+    }
+
+    legend {
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--text-soft);
+      padding: 0 0.35rem;
+    }
+
+    .radio-option {
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+      padding: 0.35rem 0;
+    }
+
+    .radio-option input[type="radio"] {
+      width: 18px;
+      height: 18px;
+      accent-color: var(--primary);
+      margin: 0;
+    }
+
+    .radio-option label {
+      font-weight: 500;
+      cursor: pointer;
+    }
+
+    /* Order summary & deliberate CSS overlap target */
+    .summary-card {
+      position: relative;
+    }
+
+    .plan-box {
+      padding: 0.8rem 0.9rem;
+      background: var(--bg-subtle);
+      border: 1px solid var(--border-default);
+      border-radius: var(--radius-md);
+      margin-bottom: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .plan-name {
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+
+    .plan-sub {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .plan-price {
+      font-weight: 700;
+      font-size: 0.95rem;
+      white-space: nowrap;
+    }
+
+    .line-items {
+      list-style: none;
+      margin: 0 0 1.15rem;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+      font-size: 0.92rem;
+    }
+
+    .line-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--text-muted);
+    }
+
+    .line-item strong {
+      color: var(--text-main);
+      font-weight: 600;
+    }
+
+    .line-item.total {
+      margin-top: 0.35rem;
+      padding-top: 0.75rem;
+      border-top: 1px solid var(--border-default);
+      font-size: 1.05rem;
+      font-weight: 750;
+      color: var(--text-main);
+    }
+
+    .value-broken {
+      color: var(--danger) !important;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-weight: 800 !important;
+      background: var(--danger-bg);
+      padding: 0.1rem 0.4rem;
+      border-radius: 5px;
+      border: 1px solid var(--danger-border);
+    }
+
+    .btn-primary {
+      width: 100%;
+      min-height: 48px;
+      border: none;
+      border-radius: 10px;
+      background: var(--primary);
+      color: #ffffff;
+      font: inherit;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.15s ease, transform 0.08s ease;
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-hover);
+    }
+
+    /* Deliberate visual layout defect: overlaps summary total and top edge of Pay button */
+    .promo-error-toast {
+      display: none;
+    }
+
+    .promo-error-toast.is-broken-overlap {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.55rem;
+      position: absolute;
+      inset-inline: 22px -12px;
+      bottom: 82px;
+      z-index: 25;
+      padding: 0.6rem 0.85rem;
+      border-radius: 10px;
+      background: #fef2f2;
+      border: 2px solid #dc2626;
+      color: #991b1b;
+      font-size: 0.83rem;
+      font-weight: 600;
+      line-height: 1.32;
+      box-shadow: 0 14px 28px rgba(185, 28, 28, 0.24);
+      transform: rotate(-1.4deg);
+    }
+
+    .promo-error-toast strong {
+      display: block;
+      color: #7f1d1d;
+      font-size: 0.875rem;
+      margin-bottom: 0.15rem;
+    }
+
+    .security-note {
+      margin: 0.75rem 0 0;
+      font-size: 0.78rem;
+      color: var(--text-soft);
+      text-align: center;
+    }
+
+    .footer-bar {
+      max-width: 920px;
+      width: 100%;
+      margin: 0 auto 1.25rem;
+      padding: 0 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.78rem;
+      color: var(--text-soft);
+    }
+
+    .reset-link {
+      background: none;
+      border: none;
+      padding: 0.25rem 0.45rem;
+      font: inherit;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    .reset-link:hover {
+      color: var(--text-main);
+    }
+
+    @media (max-width: 760px) {
+      .checkout-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .field-row {
+        grid-template-columns: 1fr;
+      }
+
+      .promo-error-toast.is-broken-overlap {
+        inset-inline: 8px 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <span class="brand-badge" aria-hidden="true">NC</span>
+        <span>NovaCloud</span>
+      </div>
+      <div class="topbar-meta">
+        <span class="env-pill">Staging QA</span>
+        <span>qa.tester@example.com</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="page-header">
+      <h1>Upgrade Workspace Subscription</h1>
+      <p>Review your billing details and apply a team promo code before confirming payment.</p>
+    </div>
+
+    <div class="checkout-grid">
+      <section class="card" aria-labelledby="billing-heading">
+        <h2 class="card-title" id="billing-heading">Billing Details</h2>
+
+        <form id="checkoutForm" action="/api/v1/billing/checkout" method="POST" novalidate>
+          <div class="field">
+            <label for="billingEmail">Billing contact email <span aria-hidden="true">*</span></label>
+            <input
+              type="email"
+              id="billingEmail"
+              name="billingEmail"
+              value="qa.tester@example.com"
+              autocomplete="email"
+              autocorrect="off"
+              autocapitalize="none"
+              spellcheck="false"
+              required
+            >
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="workspaceName">Workspace</label>
+              <input type="text" id="workspaceName" name="workspaceName" value="Acme Engineering Team" readonly>
+            </div>
+            <div class="field">
+              <label for="billingToken">Billing account token</label>
+              <input
+                type="text"
+                id="billingToken"
+                name="billingToken"
+                class="mono-value"
+                value="tok_demo_9876"
+                readonly
+              >
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="promoCode">Promo code</label>
+            <div class="promo-group">
+              <input
+                type="text"
+                id="promoCode"
+                name="promoCode"
+                value="QA50OFF"
+                aria-describedby="promoHint"
+                autocorrect="off"
+                autocapitalize="characters"
+                spellcheck="false"
+              >
+              <button type="button" id="applyPromoBtn" class="btn-secondary">Apply Promo</button>
+            </div>
+            <span id="promoHint" style="font-size: 0.78rem; color: var(--text-soft);">
+              Enter a promotional voucher to recalculate monthly seat pricing.
+            </span>
+          </div>
+
+          <fieldset>
+            <legend>Payment Method</legend>
+            <div class="radio-option">
+              <input type="radio" id="payCard" name="paymentMethod" value="card" checked>
+              <label for="payCard">Corporate Visa ending in 4242 (Default)</label>
+            </div>
+            <div class="radio-option">
+              <input type="radio" id="payInvoice" name="paymentMethod" value="invoice">
+              <label for="payInvoice">Net-30 Enterprise Invoice</label>
+            </div>
+          </fieldset>
+        </form>
+      </section>
+
+      <aside class="card summary-card" aria-labelledby="summary-heading">
+        <h2 class="card-title" id="summary-heading">Order Summary</h2>
+
+        <div class="plan-box">
+          <div>
+            <div class="plan-name">NovaCloud Pro Plan</div>
+            <div class="plan-sub">5 team seats · Monthly billing</div>
+          </div>
+          <div class="plan-price">$49.00/mo</div>
+        </div>
+
+        <ul class="line-items">
+          <li class="line-item">
+            <span>Subtotal (5 seats)</span>
+            <strong id="subtotalVal">$49.00</strong>
+          </li>
+          <li class="line-item">
+            <span>Promo discount</span>
+            <strong id="discountVal">—</strong>
+          </li>
+          <li class="line-item">
+            <span>Estimated tax (0%)</span>
+            <strong>$0.00</strong>
+          </li>
+          <li class="line-item total">
+            <span>Total due today</span>
+            <strong id="totalVal">$49.00</strong>
+          </li>
+        </ul>
+
+        <div id="promoErrorToast" class="promo-error-toast" role="alert" aria-live="polite">
+          <span aria-hidden="true" style="font-size: 1.1rem; line-height: 1.1;">&#9888;&#65039;</span>
+          <div>
+            <strong>HTTP 404 — Promo calculation error</strong>
+            <span id="promoErrorText">Failed to apply code "QA50OFF". Pricing engine returned NaN.</span>
+          </div>
+        </div>
+
+        <button type="submit" form="checkoutForm" id="paySubmitBtn" class="btn-primary">
+          Pay $49.00
+        </button>
+        <p class="security-note">TLS encrypted sandbox checkout.</p>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="footer-bar">
+    <span>NovaCloud Staging Build v2.14.0-rc3 · Test Fixture</span>
+    <button type="button" id="resetDemoBtn" class="reset-link">Reset Demo</button>
+  </footer>
+
+  <script>
+    (function () {
+      const SUBTOTAL_DISPLAY = '$49.00';
+      const applyPromoBtn = document.getElementById('applyPromoBtn');
+      const promoInput = document.getElementById('promoCode');
+      const checkoutForm = document.getElementById('checkoutForm');
+      const discountVal = document.getElementById('discountVal');
+      const totalVal = document.getElementById('totalVal');
+      const paySubmitBtn = document.getElementById('paySubmitBtn');
+      const promoErrorToast = document.getElementById('promoErrorToast');
+      const promoErrorText = document.getElementById('promoErrorText');
+      const resetDemoBtn = document.getElementById('resetDemoBtn');
+
+      function showBrokenCheckoutState(code, httpStatus) {
+        discountVal.textContent = '-$NaN';
+        discountVal.classList.add('value-broken');
+
+        totalVal.textContent = '$NaN';
+        totalVal.classList.add('value-broken');
+
+        paySubmitBtn.textContent = 'Pay $NaN';
+
+        promoErrorText.textContent =
+          'Promo endpoint returned HTTP ' +
+          httpStatus +
+          ' for "' +
+          code +
+          '". Total recalculated as $NaN.';
+        promoErrorToast.classList.add('is-broken-overlap');
+      }
+
+      async function triggerCheckoutDefect(sourceAction) {
+        const rawCode = (promoInput.value || 'QA50OFF').trim() || 'QA50OFF';
+        const endpoint =
+          '/api/v1/billing/apply-promo?code=' + encodeURIComponent(rawCode);
+
+        let statusLabel = '404';
+        try {
+          const response = await window.fetch(endpoint, {
+            method: 'GET',
+            cache: 'no-store'
+          });
+          statusLabel = String(response.status || 404);
+        } catch (networkErr) {
+          statusLabel = 'ERR_FAILED';
+        }
+
+        showBrokenCheckoutState(rawCode, statusLabel);
+
+        console.error(
+          '[BillingEngine] Discount calculation failed for code "' +
+            rawCode +
+            '" (' +
+            sourceAction +
+            ') -> Total: $NaN',
+          {
+            endpoint: endpoint,
+            httpStatus: statusLabel,
+            subtotal: SUBTOTAL_DISPLAY,
+            computedTotal: '$NaN'
+          }
+        );
+
+        // Emit a real uncaught TypeError asynchronously for DevTools Console & BugAgent JS error capture
+        window.setTimeout(function () {
+          const pricingRule = undefined;
+          void pricingRule.discountPercent;
+        }, 25);
+      }
+
+      function resetDemoState() {
+        promoInput.value = 'QA50OFF';
+        discountVal.textContent = '—';
+        discountVal.classList.remove('value-broken');
+
+        totalVal.textContent = SUBTOTAL_DISPLAY;
+        totalVal.classList.remove('value-broken');
+
+        paySubmitBtn.textContent = 'Pay ' + SUBTOTAL_DISPLAY;
+
+        promoErrorToast.classList.remove('is-broken-overlap');
+      }
+
+      applyPromoBtn.addEventListener('click', function () {
+        triggerCheckoutDefect('apply_promo_click');
+      });
+
+      checkoutForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+        triggerCheckoutDefect('checkout_submit');
+      });
+
+      resetDemoBtn.addEventListener('click', resetDemoState);
+
+      const params = new URLSearchParams(window.location.search);
+      if (params.get('auto') === '1' || params.get('bug') === '1') {
+        window.addEventListener('load', function () {
+          window.setTimeout(function () {
+            triggerCheckoutDefect('auto_query_param');
+          }, 350);
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
