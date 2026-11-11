@@ -437,7 +437,126 @@
       color: var(--text-main);
     }
 
+    .sandbox-bar {
+      background: var(--bg-card);
+      border-top: 1px solid var(--border-default);
+      padding: 0.9rem 1.25rem;
+    }
+
+    .sandbox-bar-inner {
+      max-width: 920px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .sandbox-copy {
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+      flex: 1 1 320px;
+      min-width: 0;
+    }
+
+    .sandbox-title {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .sandbox-pill {
+      display: inline-block;
+      padding: 0.1rem 0.45rem;
+      border-radius: 999px;
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      color: #1d4ed8;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    .sandbox-desc {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .sandbox-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+      flex-shrink: 0;
+    }
+
+    .sandbox-btn-outline,
+    .sandbox-btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 40px;
+      padding: 0.45rem 0.85rem;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+    }
+
+    .sandbox-btn-outline {
+      border: 1px solid var(--border-strong);
+      background: var(--bg-subtle);
+      color: var(--text-main);
+    }
+
+    .sandbox-btn-outline:hover {
+      background: #e2e8f0;
+    }
+
+    .sandbox-btn-primary {
+      border: 1px solid transparent;
+      background: var(--primary);
+      color: #ffffff;
+    }
+
+    .sandbox-btn-primary:hover {
+      background: var(--primary-hover);
+    }
+
+    .sandbox-bar a:focus-visible {
+      outline: 3px solid #2563eb;
+      outline-offset: 2px;
+    }
+
     @media (max-width: 760px) {
+      .topbar {
+        padding: 0.65rem 1rem;
+      }
+
+      .topbar-inner {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+
+      .topbar-meta {
+        gap: 0.5rem;
+        font-size: 0.78rem;
+        max-width: 100%;
+        flex-wrap: wrap;
+      }
+
+      .env-pill {
+        white-space: nowrap;
+      }
+
       .checkout-grid {
         grid-template-columns: 1fr;
       }
@@ -448,6 +567,39 @@
 
       .promo-error-toast.is-broken-overlap {
         inset-inline: 8px 8px;
+      }
+
+      .footer-bar {
+        gap: 0.75rem;
+      }
+
+      .reset-link {
+        white-space: nowrap;
+        flex-shrink: 0;
+      }
+
+      .sandbox-bar {
+        padding: 0.9rem 1rem;
+      }
+
+      .sandbox-bar-inner {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .sandbox-copy {
+        flex: none;
+      }
+
+      .sandbox-actions {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      .sandbox-btn-outline,
+      .sandbox-btn-primary {
+        width: 100%;
+        min-height: 44px;
       }
     }
   </style>
@@ -594,6 +746,22 @@
     <span>NovaCloud Staging Build v2.14.0-rc3 · Test Fixture</span>
     <button type="button" id="resetDemoBtn" class="reset-link">Reset Demo</button>
   </footer>
+
+  <aside class="sandbox-bar" aria-label="BugAgent AI Sandbox Controls">
+    <div class="sandbox-bar-inner">
+      <div class="sandbox-copy">
+        <div class="sandbox-title">
+          <span class="sandbox-pill">QA Sandbox</span>
+          <span>BugAgent AI Interactive Demo</span>
+        </div>
+        <span class="sandbox-desc">Click <strong>Apply Promo</strong> above to trigger a sample HTTP 404, JS console error, and CSS overlap bug.</span>
+      </div>
+      <div class="sandbox-actions">
+        <a href="https://bugagentai.com/" class="sandbox-btn-outline">&larr; Back to bugagentai.com</a>
+        <a href="https://chromewebstore.google.com/detail/ifligmhoakpphcdinajnmefdopaallbl?utm_source=demo-bug&amp;utm_medium=sandbox&amp;utm_campaign=demo_footer" class="sandbox-btn-primary" target="_blank" rel="noopener">Add BugAgent AI to Chrome</a>
+      </div>
+    </div>
+  </aside>
 
   <script>
     (function () {
