@@ -325,30 +325,30 @@ const boards = [
   {
     name: 'screenshot-1-visual-bug-capture-1280x800',
     data: {
-      featureTag: '● FEATURE 01 • VISUAL BUG CREATOR',
-      titleMain: 'Capture, Analyze & Report Bugs in',
-      titleGradient: 'Seconds',
-      subtitle: 'Eliminate manual QA documentation. Capture full tabs or snips, drag & drop screenshots, auto-diagnose UI anomalies with AI, and sync to Jira instantly.',
+      featureTag: '● v2.0.0 • ZERO-PII AUTO-REPRO & VISUAL BUG CREATOR',
+      titleMain: 'Clicks, Logs & Screenshots to Jira in',
+      titleGradient: '3 Seconds',
+      subtitle: 'No heavy screen recording. BugAgent AI 2.0 passively captures Zero-PII user action breadcrumbs, 404/500 console logs, and screenshots into ready-to-file Jira tickets.',
       bullets: [
         {
-          icon: '🎛️',
-          title: '4-Engine Vision AI Hub (Claude, Gemini, OpenAI, Ollama)',
-          desc: 'Toggle seamlessly between Anthropic Claude, Google Gemini, OpenAI GPT-4o, and 100% offline Ollama right in the bug creator.'
+          icon: '👣',
+          title: 'Zero-PII Auto-Repro Recorder (Click Breadcrumbs)',
+          desc: 'Automatically records clicks, form steps, and SPA routes without passwords or PII — ~100× lighter than video.'
         },
         {
-          icon: '💻',
-          title: 'Automated Environment Diagnostics',
-          desc: 'Automatic detection of OS, browser version, viewport, and screen resolution formatted into clean Jira tables.'
+          icon: '🔴',
+          title: '404/500 Network & Console + 4-Engine Vision AI',
+          desc: 'Correlates failed requests, JS errors, and screenshots using Anthropic Claude, Gemini, OpenAI, or offline Ollama.'
         },
         {
-          icon: '📁',
-          title: 'Drag & Drop and Global Shortcuts',
-          desc: 'Drop images directly, click to browse, paste from clipboard, or capture instantly with ⌘+Shift+S / Alt+Shift+S.'
+          icon: '🎯',
+          title: 'Smart Dynamic Jira Issue Types & Auto-Specs',
+          desc: 'Fetches project issue types in any Jira language (Bug, Błąd, Fehler, Task) with OS, browser & viewport tables.'
         }
       ],
-      topPill: '⚡ Claude • Gemini • OpenAI • Ollama',
-      bottomPill: '🎯 Auto-Detected Specs: macOS & Viewport',
-      panelTitle: 'BugAgent AI — New Issue Creator',
+      topPill: '✨ 5 Actions Recorded • 🔒 No Passwords',
+      bottomPill: '⚡ Claude • Gemini • OpenAI • Ollama',
+      panelTitle: 'BugAgent AI 2.0 — Auto-Repro & Bug Creator',
       imageRelativePath: '../../assets/user_raw/user-1-new-issue.png'
     }
   },
