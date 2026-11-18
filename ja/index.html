@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BugAgent AI - 自律型AI QAエージェント & Jiraバグ報告ツール</title>
-  <meta name="description" content="ソフトウェアのバグ報告を自動化。画面キャプチャ、Anthropic Claude・Google Gemini・OpenAI・ローカルOllamaによるAI解析、そして数秒でのJiraチケット作成を実現します。">
+  <meta name="description" content="バグ報告を自動化。Zero-PIIの操作履歴（Click Breadcrumbs）を受動記録し、画面キャプチャや404/500ログをClaude・Gemini・OpenAI・ローカルOllamaで解析して数秒でJira起票。">
   <link rel="canonical" href="https://bugagentai.com/ja/">
   <link rel="alternate" hreflang="x-default" href="https://bugagentai.com/">
   <link rel="alternate" hreflang="en" href="https://bugagentai.com/">
@@ -20,7 +20,7 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://bugagentai.com/ja/">
   <meta property="og:title" content="BugAgent AI - 自律型AI QAエージェント & Jiraバグ報告ツール">
-  <meta property="og:description" content="画面キャプチャ、ドラッグ＆ドロップ、Anthropic Claude・Gemini・OpenAI・ローカルOllamaによるAI解析、リッチなJiraチケットを瞬時に作成。">
+  <meta property="og:description" content="Zero-PII Auto-Repro Click Breadcrumbs、404/500ログ＆スクリーンショットをClaude・Gemini・OpenAI・ローカルOllamaで解析し3秒でJira起票。">
   <meta property="og:image" content="https://bugagentai.com/assets/og-image-1200x630.jpg">
   <meta property="og:image:secure_url" content="https://bugagentai.com/assets/og-image-1200x630.jpg">
   <meta property="og:image:type" content="image/jpeg">
@@ -33,7 +33,7 @@
   <meta name="twitter:domain" content="bugagentai.com">
   <meta name="twitter:url" content="https://bugagentai.com/ja/">
   <meta name="twitter:title" content="BugAgent AI - 自律型AI QAエージェント & Jiraバグ報告ツール">
-  <meta name="twitter:description" content="画面キャプチャ、ドラッグ＆ドロップ、Anthropic Claude・Gemini・OpenAI・ローカルOllamaによるAI解析、リッチなJiraチケットを瞬時に作成。">
+  <meta name="twitter:description" content="Zero-PII Auto-Repro Click Breadcrumbs、404/500ログ＆スクリーンショットをClaude・Gemini・OpenAI・ローカルOllamaで解析し3秒でJira起票。">
   <meta name="twitter:image" content="https://bugagentai.com/assets/og-image-1200x630.jpg">
 
   <!-- Umami Cloud Privacy-Friendly Analytics -->
@@ -51,7 +51,7 @@
     "applicationCategory": "DeveloperApplication",
     "operatingSystem": "Google Chrome, macOS, Windows, Linux, ChromeOS",
     "softwareVersion": "1.6.0",
-    "description": "ソフトウェアのバグ報告を自動化。画面キャプチャ、Anthropic Claude・Google Gemini・OpenAI・ローカルOllamaによるAI解析、そして数秒でのJiraチケット作成を実現します。",
+    "description": "バグ報告を自動化。Zero-PIIの操作履歴（Click Breadcrumbs）を受動記録し、画面キャプチャや404/500ログをClaude・Gemini・OpenAI・ローカルOllamaで解析して数秒でJira起票。",
     "image": "https://bugagentai.com/assets/og-image-1200x630.jpg",
     "downloadUrl": "https://chromewebstore.google.com/detail/ifligmhoakpphcdinajnmefdopaallbl",
     "screenshot": [
@@ -1188,13 +1188,13 @@
   <section class="hero">
     <div class="container">
       <div class="badge-pill">
-        <span>🟠 v1.6.0新機能: ANTHROPIC CLAUDE VISION AI、4エンジンハブ＆スマートなエラー案内</span>
+        <span>🚀 v2.0.0新機能: ZERO-PII AUTO-REPRO RECORDER (操作履歴) & 動的JIRA課題タイプ対応</span>
         <span class="badge-dot" aria-hidden="true">•</span>
         <span>完全なプライバシー (BYOK & ローカルAI)</span>
       </div>
       <h1 class="hero-title">BugAgent AI で Jira のバグ報告を数秒で <span>自動化する</span></h1>
       <p class="hero-subtitle">
-        QAエンジニア、ソフトウェアテスター、プロダクトマネージャーのための自律型AI QAエージェント。Anthropic Claude、Google Gemini、OpenAI、または100%オフラインのOllamaで画面上の不具合を解析し、タブを離れることなく詳細なJiraチケットを瞬時に作成します。
+        QAエンジニア・テスター・PM向けの自律型AI QAエージェント。Zero-PIIのユーザー操作履歴（Breadcrumbs）、画面キャプチャ、404/500ログを記録し、Claude・Gemini・OpenAI・オフラインOllamaで解析してタブを離れずJira起票できます。
       </p>
       <div class="hero-actions">
         <a id="install" href="https://chromewebstore.google.com/detail/ifligmhoakpphcdinajnmefdopaallbl?utm_source=bugagentai.com&amp;utm_medium=website&amp;utm_campaign=cta_hero" class="btn btn-primary btn-lg" target="_blank" rel="noopener" data-umami-event="Add to Chrome (Hero)">
@@ -1234,8 +1234,8 @@
           <div class="feature-icon-badge">
             <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
           </div>
-          <h3>ワンクリック、ドラッグ＆ドロップとショートカット</h3>
-          <p>ワンクリックで表示中のタブを即座にキャプチャ、スクリーンショットを直接ドラッグ＆ドロップ、またはグローバルショートカット：<strong>⌘+Shift+S</strong>（macOS）および <strong>Alt+Shift+S</strong>（Win/Linux）を利用可能。</p>
+          <h3>Zero-PII Auto-Repro Recorder（操作履歴記録）</h3>
+          <p>クリックやフォーム入力、SPA遷移を受動記録し時系列の再現手順を生成（<strong>Zero-PII・パスワード除外</strong>）— 動画録画より約100倍軽量。1クリックでJira Wikiへ挿入、またはAIへ直接連携。<strong>⌘+Shift+S</strong> / <strong>Alt+Shift+S</strong>・D&amp;D対応。</p>
         </div>
 
         <!-- Feature 2 -->
@@ -1244,7 +1244,7 @@
             <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
           </div>
           <h3>4エンジン Vision AI ハブ（Claude, Gemini, OpenAI & Ollama）</h3>
-          <p><strong>Anthropic Claude</strong>（Sonnet &amp; Haiku）、Google Gemini（3.8 Flash）、OpenAI（GPT-4o）、<strong>OllamaローカルAI</strong>（100%オフライン）を自在に切り替え。根本原因の仮説や再現手順を6言語で自動生成します。</p>
+          <p><strong>Anthropic Claude</strong>（Sonnet &amp; Haiku）、Google Gemini（3.8 Flash）、OpenAI（GPT-4o）、<strong>OllamaローカルAI</strong>（100%オフライン）を自在に切り替え。操作履歴・画面・404/500ログを相関解析し6言語で再現手順を生成します。</p>
         </div>
 
         <!-- Feature 3 -->
@@ -1252,8 +1252,8 @@
           <div class="feature-icon-badge">
             <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
           </div>
-          <h3>Jira向け動作環境スペックの自動検出</h3>
-          <p>OS、ブラウザのバージョン、ビューポート解像度、Retinaスケーリング比率を自動抽出し、手入力不要で美しいJira Wiki形式のテーブルとして整形します。</p>
+          <h3>動的Jira課題タイプ & 動作環境自動検出</h3>
+          <p>Jira Cloud / Server・DCの各言語（Bug, Błąd, Fehler, Task等）のプロジェクト別課題タイプを自動取得し、OS・ブラウザ・ビューポートをJira Wikiテーブルに整形します。</p>
         </div>
 
         <!-- Feature 4 -->
@@ -1297,7 +1297,7 @@
 
       <div class="showcase-tabs">
         <button type="button" class="tab-btn active" onclick="switchTab(0)">▶ ライブ動画デモ (35秒)</button>
-        <button type="button" class="tab-btn" onclick="switchTab(1)">1. バグ作成 (4エンジンAI)</button>
+        <button type="button" class="tab-btn" onclick="switchTab(1)">1. Auto-Repro操作履歴 & バグ作成 (v2.0)</button>
         <button type="button" class="tab-btn" onclick="switchTab(2)">2. 1分間オンボーディング</button>
         <button type="button" class="tab-btn" onclick="switchTab(3)">3. 4エンジンAI & Ollama設定</button>
         <button type="button" class="tab-btn" onclick="switchTab(4)">4. Jira送信履歴・共有</button>
