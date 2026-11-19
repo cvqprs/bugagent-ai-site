@@ -98,6 +98,8 @@
   "support_help_title": "Need Assistance or Found a Bug?",
   "support_help_text": "Our team actively monitors support requests and issue submissions. If you encounter any bugs, API authentication issues, or have a feature request, please submit an issue on our GitHub repository.",
   "support_help_cta": "Open Issue on GitHub",
+  "watch_video_guide": "Watch 40s Video Guide on YouTube",
+  "footer_youtube": "YouTube Video Guides",
   "footer_tagline": "The autonomous AI QA agent that automates defect reporting with Anthropic Claude, Google Gemini, OpenAI & Localhost Ollama Vision AI into Atlassian Jira.",
   "footer_quick_links": "Quick Links",
   "footer_resources": "Resources",

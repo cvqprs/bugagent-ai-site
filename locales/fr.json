@@ -98,6 +98,8 @@
   "support_help_title": "Besoin d'aide ou vous avez repéré une anomalie ?",
   "support_help_text": "Notre équipe suit attentivement les retours utilisateurs. Si vous rencontrez un dysfonctionnement ou avez une suggestion d'amélioration, merci de créer un ticket sur notre dépôt GitHub.",
   "support_help_cta": "Créer un ticket sur GitHub",
+  "watch_video_guide": "Voir le tutoriel vidéo de 40s sur YouTube",
+  "footer_youtube": "Tutoriels vidéo YouTube",
   "footer_tagline": "L'agent autonome de QA qui automatise les rapports d'anomalies avec Anthropic Claude, Google Gemini, OpenAI & Ollama local vers Atlassian Jira.",
   "footer_quick_links": "Liens rapides",
   "footer_resources": "Ressources",

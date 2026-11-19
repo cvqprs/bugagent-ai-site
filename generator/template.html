@@ -809,9 +809,30 @@
       gap: 10px;
     }
 
-    .support-card a:not(.btn) {
+    .support-card a:not(.btn):not(.support-video-link) {
       color: var(--jira-blue);
       text-decoration: underline;
+    }
+
+    .support-video-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      margin-top: 14px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: var(--jira-blue-subtle);
+      border: 1px solid rgba(0, 82, 204, 0.22);
+      color: var(--jira-blue);
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.15s ease, border-color 0.15s ease;
+    }
+
+    .support-video-link:hover {
+      background: rgba(0, 82, 204, 0.14);
+      border-color: var(--jira-blue);
     }
 
     .code-badge {
@@ -1327,6 +1348,7 @@
           <div class="showcase-media-links">
             <span>{{demo_download_label}}</span>
             <a class="media-pill-link" href="{{assets_path}}bugagent-ai-demo-v2.0.mp4" target="_blank" rel="noopener" data-umami-event="Demo Video Open MP4">MP4 (1.9 MB)</a>
+            <a class="media-pill-link" href="https://www.youtube.com/@BugAgentAI?utm_source=bugagentai.com&amp;utm_medium=website&amp;utm_campaign=showcase_yt" target="_blank" rel="noopener" data-umami-event="YouTube Channel (Showcase)">▶ YouTube (@BugAgentAI)</a>
           </div>
         </div>
       </div>
@@ -1405,6 +1427,7 @@
             <li>{{support_jira_step3}}</li>
             <li>{{support_jira_step4}}</li>
           </ol>
+          <a class="support-video-link" href="https://www.youtube.com/watch?v=_35GsP9jSv0" target="_blank" rel="noopener" data-umami-event="Support Video Jira">▶ {{watch_video_guide}}</a>
         </div>
 
         <!-- Setup Guide: Gemini -->
@@ -1418,6 +1441,7 @@
             <li>{{support_gemini_step2}}</li>
             <li>{{support_gemini_step3}}</li>
           </ol>
+          <a class="support-video-link" href="https://www.youtube.com/watch?v=hsSUUIbrQDY" target="_blank" rel="noopener" data-umami-event="Support Video Gemini">▶ {{watch_video_guide}}</a>
         </div>
 
         <!-- Setup Guide: OpenAI -->
@@ -1431,6 +1455,7 @@
             <li>{{support_openai_step2}}</li>
             <li>{{support_openai_step3}}</li>
           </ol>
+          <a class="support-video-link" href="https://www.youtube.com/watch?v=v5od5s87bMk" target="_blank" rel="noopener" data-umami-event="Support Video OpenAI">▶ {{watch_video_guide}}</a>
         </div>
 
         <!-- Setup Guide: Anthropic Claude -->
@@ -1444,6 +1469,7 @@
             <li>{{support_claude_step2}}</li>
             <li>{{support_claude_step3}}</li>
           </ol>
+          <a class="support-video-link" href="https://www.youtube.com/watch?v=ef-OXF4A5ak" target="_blank" rel="noopener" data-umami-event="Support Video Claude">▶ {{watch_video_guide}}</a>
         </div>
 
         <!-- Setup Guide: Ollama Local AI -->
@@ -1457,6 +1483,7 @@
             <li>{{support_ollama_step2}}</li>
             <li>{{support_ollama_step3}}</li>
           </ol>
+          <a class="support-video-link" href="https://www.youtube.com/watch?v=4_4IkGklLlU" target="_blank" rel="noopener" data-umami-event="Support Video Ollama">▶ {{watch_video_guide}}</a>
         </div>
 
         <!-- Support Contact Box -->
@@ -1503,6 +1530,7 @@
               <li><a href="#screenshots">{{nav_screenshots}}</a></li>
               <li><a href="#pricing">{{nav_pricing}}</a></li>
               <li><a href="https://chromewebstore.google.com/detail/ifligmhoakpphcdinajnmefdopaallbl?utm_source=bugagentai.com&amp;utm_medium=website&amp;utm_campaign=cta_footer" target="_blank" rel="noopener" data-umami-event="Add to Chrome (Footer)">Chrome Web Store</a></li>
+              <li><a href="https://www.youtube.com/@BugAgentAI?utm_source=bugagentai.com&amp;utm_medium=website&amp;utm_campaign=footer_yt" target="_blank" rel="noopener" data-umami-event="YouTube Channel (Footer)">{{footer_youtube}}</a></li>
             </ul>
           </div>
           <div class="footer-col">

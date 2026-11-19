@@ -809,9 +809,30 @@
       gap: 10px;
     }
 
-    .support-card a:not(.btn) {
+    .support-card a:not(.btn):not(.support-video-link) {
       color: var(--jira-blue);
       text-decoration: underline;
+    }
+
+    .support-video-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      margin-top: 14px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: var(--jira-blue-subtle);
+      border: 1px solid rgba(0, 82, 204, 0.22);
+      color: var(--jira-blue);
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.15s ease, border-color 0.15s ease;
+    }
+
+    .support-video-link:hover {
+      background: rgba(0, 82, 204, 0.14);
+      border-color: var(--jira-blue);
     }
 
     .code-badge {
@@ -1355,6 +1376,7 @@
           <div class="showcase-media-links">
             <span>Direct files:</span>
             <a class="media-pill-link" href="assets/bugagent-ai-demo-v2.0.mp4" target="_blank" rel="noopener" data-umami-event="Demo Video Open MP4">MP4 (1.9 MB)</a>
+            <a class="media-pill-link" href="https://www.youtube.com/@BugAgentAI?utm_source=bugagentai.com&amp;utm_medium=website&amp;utm_campaign=showcase_yt" target="_blank" rel="noopener" data-umami-event="YouTube Channel (Showcase)">▶ YouTube (@BugAgentAI)</a>
           </div>
         </div>
       </div>
@@ -1433,6 +1455,7 @@
             <li>For Jira Cloud: Enter your Atlassian account email and an <strong>API Token</strong> created at <a href="https://id.atlassian.com/manage-profile/security/api-tokens" target="_blank" rel="noopener">id.atlassian.com</a>.<br>For Server/Data Center: Select <strong>Personal Access Token (PAT)</strong> and paste your token.</li>
             <li>Click <strong>Test Jira Connection</strong>. Once verified, click <strong>Save Settings</strong>.</li>
           </ol>
+          <a class="support-video-link" href="https://www.youtube.com/watch?v=_35GsP9jSv0" target="_blank" rel="noopener" data-umami-event="Support Video Jira">▶ Watch 40s Video Guide on YouTube</a>
         </div>
 
         <!-- Setup Guide: Gemini -->
@@ -1446,6 +1469,7 @@
             <li>Click <strong>Create API key</strong>, select your Google Cloud project (or generate a default one), and copy the generated key.</li>
             <li>Paste the key into Settings &rarr; <strong>Gemini Vision Key</strong>, and click <strong>Save Settings</strong>.</li>
           </ol>
+          <a class="support-video-link" href="https://www.youtube.com/watch?v=hsSUUIbrQDY" target="_blank" rel="noopener" data-umami-event="Support Video Gemini">▶ Watch 40s Video Guide on YouTube</a>
         </div>
 
         <!-- Setup Guide: OpenAI -->
@@ -1459,6 +1483,7 @@
             <li>Click <strong>Create new secret key</strong>, give it an identifier name (e.g. <em>BugAgent AI</em>), and click <strong>Create secret key</strong>.</li>
             <li>Copy your key (starts with <span class="code-badge">sk-...</span>), paste it into Settings &rarr; <strong>OpenAI Vision Key</strong>, and click <strong>Save Settings</strong>.</li>
           </ol>
+          <a class="support-video-link" href="https://www.youtube.com/watch?v=v5od5s87bMk" target="_blank" rel="noopener" data-umami-event="Support Video OpenAI">▶ Watch 40s Video Guide on YouTube</a>
         </div>
 
         <!-- Setup Guide: Anthropic Claude -->
@@ -1472,6 +1497,7 @@
             <li>Click <strong>Create Key</strong>, give it an identifier name (e.g. <em>BugAgent AI</em>), and click <strong>Add</strong>.</li>
             <li>Copy your key (starts with <span class="code-badge">sk-ant-...</span>), paste it into Settings &rarr; <strong>Claude API Key</strong>, select Claude Sonnet or Haiku, and click <strong>Save Settings</strong>.</li>
           </ol>
+          <a class="support-video-link" href="https://www.youtube.com/watch?v=ef-OXF4A5ak" target="_blank" rel="noopener" data-umami-event="Support Video Claude">▶ Watch 40s Video Guide on YouTube</a>
         </div>
 
         <!-- Setup Guide: Ollama Local AI -->
@@ -1485,6 +1511,7 @@
             <li>Launch Ollama with CORS enabled for browser extensions: on macOS/Linux run <span class="code-badge">OLLAMA_ORIGINS="*" ollama serve</span>, or configure the environment variable on Windows.</li>
             <li>In BugAgent AI Settings, choose <strong>Localhost AI (Ollama)</strong>, verify the URL (<span class="code-badge">http://localhost:11434</span>), click <strong>Fetch Models</strong> to select your vision model, and save.</li>
           </ol>
+          <a class="support-video-link" href="https://www.youtube.com/watch?v=4_4IkGklLlU" target="_blank" rel="noopener" data-umami-event="Support Video Ollama">▶ Watch 40s Video Guide on YouTube</a>
         </div>
 
         <!-- Support Contact Box -->
@@ -1531,6 +1558,7 @@
               <li><a href="#screenshots">Screenshots</a></li>
               <li><a href="#pricing">Pricing</a></li>
               <li><a href="https://chromewebstore.google.com/detail/ifligmhoakpphcdinajnmefdopaallbl?utm_source=bugagentai.com&amp;utm_medium=website&amp;utm_campaign=cta_footer" target="_blank" rel="noopener" data-umami-event="Add to Chrome (Footer)">Chrome Web Store</a></li>
+              <li><a href="https://www.youtube.com/@BugAgentAI?utm_source=bugagentai.com&amp;utm_medium=website&amp;utm_campaign=footer_yt" target="_blank" rel="noopener" data-umami-event="YouTube Channel (Footer)">YouTube Video Guides</a></li>
             </ul>
           </div>
           <div class="footer-col">
