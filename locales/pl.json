@@ -98,6 +98,8 @@
   "support_help_title": "Potrzebujesz pomocy lub znalazłeś błąd?",
   "support_help_text": "Nasz zespół na bieżąco monitoruje zgłoszenia. Jeśli napotkasz problem z działaniem wtyczki, autoryzacją API lub masz propozycję nowej funkcji, otwórz zgłoszenie w naszym repozytorium GitHub.",
   "support_help_cta": "Zgłoś problem na GitHub",
+  "watch_video_guide": "Zobacz 40s poradnik wideo na YouTube",
+  "footer_youtube": "Poradniki wideo YouTube",
   "footer_tagline": "Autonomiczny agent QA AI, który automatyzuje raportowanie defektów z użyciem Anthropic Claude, Google Gemini, OpenAI i lokalnej Ollamy do Atlassian Jira.",
   "footer_quick_links": "Szybkie linki",
   "footer_resources": "Zasoby",

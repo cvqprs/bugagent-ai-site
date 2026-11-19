@@ -98,6 +98,8 @@
   "support_help_title": "サポートが必要な場合や不具合を見つけた場合",
   "support_help_text": "開発チームはサポートや問題報告を継続的に確認しています。動作不良や機能の要望がある場合は、GitHubリポジトリでIssueを作成してください。",
   "support_help_cta": "GitHubでIssueを作成",
+  "watch_video_guide": "YouTube で40秒動画ガイドを見る",
+  "footer_youtube": "YouTube 動画ガイド",
   "footer_tagline": "Anthropic Claude、Google Gemini、OpenAI、ローカルOllamaを活用してAtlassian Jiraへのバグ報告を自動化する自律型AI QAエージェント。",
   "footer_quick_links": "クイックリンク",
   "footer_resources": "リソース",

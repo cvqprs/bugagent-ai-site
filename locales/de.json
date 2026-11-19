@@ -98,6 +98,8 @@
   "support_help_title": "Brauchst du Hilfe oder hast du einen Fehler entdeckt?",
   "support_help_text": "Unser Team überwacht Supportanfragen kontinuierlich. Wenn du auf ein Problem stößt oder einen Feature-Wunsch hast, erstelle bitte ein Issue auf unserem GitHub-Repository.",
   "support_help_cta": "Issue auf GitHub öffnen",
+  "watch_video_guide": "40s Video-Anleitung auf YouTube ansehen",
+  "footer_youtube": "YouTube Video-Guides",
   "footer_tagline": "Der autonome KI-QA-Agent zur automatisierten Fehlerberichterstattung mit Anthropic Claude, Google Gemini, OpenAI & lokaler Ollama Vision in Atlassian Jira.",
   "footer_quick_links": "Direktlinks",
   "footer_resources": "Ressourcen",

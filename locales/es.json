@@ -98,6 +98,8 @@
   "support_help_title": "¿Necesitas ayuda o has encontrado un fallo?",
   "support_help_text": "Nuestro equipo supervisa continuamente las solicitudes de soporte. Si encuentras algún error en la extensión o deseas solicitar una nueva función, crea una incidencia en nuestro repositorio de GitHub.",
   "support_help_cta": "Abrir incidencia en GitHub",
+  "watch_video_guide": "Ver guía en vídeo de 40s en YouTube",
+  "footer_youtube": "Guías en vídeo (YouTube)",
   "footer_tagline": "El agente autónomo de QA que automatiza los informes de errores con Anthropic Claude, Google Gemini, OpenAI y Ollama local directamente en Atlassian Jira.",
   "footer_quick_links": "Enlaces rápidos",
   "footer_resources": "Recursos",
